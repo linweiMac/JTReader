@@ -1,0 +1,6 @@
+framework module Pods_JTReader {
+  umbrella header "Pods-JTReader-umbrella.h"
+
+  export *
+  module * { export * }
+}
