@@ -1,26 +1,96 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nUg-m0-BEb">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="G3e-l4-bY6">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="nUg-m0-BEb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ThN-M5-a25">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aFW-a9-YMW" kind="relationship" relationship="rootViewController" id="76p-BA-MgG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KJf-xX-2ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-466" y="149"/>
+        </scene>
+        <!--书架-->
+        <scene sceneID="mkq-yl-BcB">
+            <objects>
+                <viewController id="aFW-a9-YMW" customClass="BookShelfVC" customModule="JTReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TLl-Jx-fkh"/>
+                        <viewControllerLayoutGuide type="bottom" id="nh4-sU-jmd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zo0-QX-Ljh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JaJ-AY-kp6">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eN2-Xc-9ix">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CXW-wW-r4F">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpr-tf-EPV">
+                                <rect key="frame" x="237" y="388.5" width="83" height="41.5"/>
+                                <color key="backgroundColor" red="1" green="0.25913380636292027" blue="0.094413284440272083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vpr-tf-EPV" secondAttribute="height" multiplier="2:1" id="eYl-Iw-AcD"/>
+                                </constraints>
+                                <state key="normal" title="书城"/>
+                                <connections>
+                                    <action selector="bookStoreClick:" destination="aFW-a9-YMW" eventType="touchUpInside" id="h9p-Da-5M6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JaJ-AY-kp6" firstAttribute="leading" secondItem="Zo0-QX-Ljh" secondAttribute="leading" id="95a-ds-d5r"/>
+                            <constraint firstItem="nh4-sU-jmd" firstAttribute="top" secondItem="JaJ-AY-kp6" secondAttribute="bottom" id="BzE-cS-DF4"/>
+                            <constraint firstItem="vpr-tf-EPV" firstAttribute="bottom" secondItem="JaJ-AY-kp6" secondAttribute="bottom" constant="-50" id="O3i-JU-cfg"/>
+                            <constraint firstItem="vpr-tf-EPV" firstAttribute="width" secondItem="JaJ-AY-kp6" secondAttribute="width" multiplier="0.26" id="U3H-De-GcM"/>
+                            <constraint firstAttribute="trailing" secondItem="JaJ-AY-kp6" secondAttribute="trailing" id="kIo-Br-XPm"/>
+                            <constraint firstItem="JaJ-AY-kp6" firstAttribute="top" secondItem="TLl-Jx-fkh" secondAttribute="bottom" id="pZ6-Vf-Hqy"/>
+                            <constraint firstItem="vpr-tf-EPV" firstAttribute="trailing" secondItem="JaJ-AY-kp6" secondAttribute="trailing" id="z4r-Nq-mWm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="书架" id="hbw-hz-sBN"/>
+                    <connections>
+                        <outlet property="bookStoreBtn" destination="vpr-tf-EPV" id="7kI-zz-XNn"/>
+                        <outlet property="collection" destination="JaJ-AY-kp6" id="Bow-Ot-cIh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5as-In-IIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="365.60000000000002" y="145.27736131934034"/>
         </scene>
     </scenes>
 </document>
