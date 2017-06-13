@@ -11,9 +11,14 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
+    var allowRotation = 0
+    
+    class func shareAppDelegate () -> AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -21,7 +26,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
 
+    // MARK:-实现页面是否支持横竖屏
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        
+        if allowRotation == 1 {
+            
+//            if !UIApplication.shared.statusBarOrientation.isPortrait {
+//                
+//                return UIInterfaceOrientationMask.portrait
+//            }else{
+                return UIInterfaceOrientationMask.landscapeLeft
+//            }
+            
+        }else{
+            
+            return UIInterfaceOrientationMask.portrait
+        }
+        
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

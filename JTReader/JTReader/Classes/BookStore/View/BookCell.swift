@@ -18,7 +18,7 @@ class BookCell: UICollectionViewCell {
             // 0.校验模型是否有值
             guard let model = model else { return }
     
-            bookIcon.kf.setImage(with: URL(string: model.bookIcon))
+            bookIcon.kf.setImage(with: URL(string: model.bookIcon), placeholder: UIImage.init(named: "default_img.jpg"))
         }
     }
     

@@ -12,6 +12,14 @@ import SwiftyJSON
 
 class NetWorkTool: NSObject {
     
+// MARK:-获取书本评论列表  book/queryCommentList
+    class func requestBookCommentData (bookId:String, pageNum:String, finishedCallback : @escaping (_ result: AnyObject) -> ()) {
+        
+        let parameters = ["bookId": bookId, "pageNum":pageNum, "pageSize":"20"]
+        
+        self.requestData(URLString: "book/queryCommentList", parameters: parameters, finishedCallback: finishedCallback)
+    }
+    
 // MARK:-获取分类列表     book/queryCatalogList
     class func requestCatagoryList (type:String, finishedCallback : @escaping (_ result: AnyObject) -> ()) {
         

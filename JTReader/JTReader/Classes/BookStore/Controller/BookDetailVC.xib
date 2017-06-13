@@ -1,12 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookDetailVC" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookDetailVC" customModule="JTReader" customModuleProvider="target">
             <connections>
+                <outlet property="downloadBtn" destination="Koo-Qe-53i" id="HB3-Br-P31"/>
+                <outlet property="dubBtn" destination="KZ8-vE-Gc0" id="z5X-2Q-zRh"/>
+                <outlet property="funcTionView" destination="o7Q-DX-mK6" id="W0j-xI-m68"/>
+                <outlet property="tableView" destination="pbr-BI-cew" id="227-pl-iu7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +22,78 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pbr-BI-cew">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5Qs-HK-gbP"/>
+                        <outlet property="delegate" destination="-1" id="iKx-lI-8qa"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o7Q-DX-mK6">
+                    <rect key="frame" x="-1" y="617" width="377" height="51"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ8-vE-Gc0">
+                            <rect key="frame" x="15" y="8" width="166" height="34"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <state key="normal" title="配音">
+                                <color key="titleColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="dubBtnClick:" destination="-1" eventType="touchUpInside" id="MmI-36-1Lj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Koo-Qe-53i">
+                            <rect key="frame" x="196" y="8" width="166" height="34"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                            <state key="normal" title="阅读">
+                                <color key="titleColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="downloadBtnClick:" destination="-1" eventType="touchUpInside" id="zfh-Ve-K1Z"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fZ-Es-EuO">
+                            <rect key="frame" x="188" y="10.5" width="1" height="30"/>
+                            <color key="backgroundColor" red="0.72148895263671875" green="0.7216145396232605" blue="0.72148102521896362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="1" id="sVp-0d-bXa"/>
+                                <constraint firstAttribute="height" constant="30" id="t0b-wb-OVp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="0fZ-Es-EuO" firstAttribute="centerX" secondItem="o7Q-DX-mK6" secondAttribute="centerX" id="0y2-vE-74m"/>
+                        <constraint firstAttribute="bottom" secondItem="Koo-Qe-53i" secondAttribute="bottom" constant="9" id="AZS-EM-hYQ"/>
+                        <constraint firstItem="Koo-Qe-53i" firstAttribute="leading" secondItem="KZ8-vE-Gc0" secondAttribute="trailing" constant="15" id="MTB-Yu-I7y"/>
+                        <constraint firstItem="0fZ-Es-EuO" firstAttribute="centerY" secondItem="o7Q-DX-mK6" secondAttribute="centerY" id="QGS-zg-8kx"/>
+                        <constraint firstItem="KZ8-vE-Gc0" firstAttribute="leading" secondItem="o7Q-DX-mK6" secondAttribute="leading" constant="15" id="S1G-Q0-4kX"/>
+                        <constraint firstAttribute="height" constant="51" id="S4A-6K-ACk"/>
+                        <constraint firstItem="Koo-Qe-53i" firstAttribute="top" secondItem="o7Q-DX-mK6" secondAttribute="top" constant="8" id="Sr0-kX-bZu"/>
+                        <constraint firstAttribute="bottom" secondItem="KZ8-vE-Gc0" secondAttribute="bottom" constant="9" id="ULr-cn-KPi"/>
+                        <constraint firstItem="KZ8-vE-Gc0" firstAttribute="top" secondItem="o7Q-DX-mK6" secondAttribute="top" constant="8" id="VdN-jB-wpZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Koo-Qe-53i" secondAttribute="trailing" constant="15" id="eUo-wj-WQF"/>
+                        <constraint firstItem="Koo-Qe-53i" firstAttribute="leading" secondItem="KZ8-vE-Gc0" secondAttribute="trailing" constant="15" id="kEp-fD-Sfr"/>
+                        <constraint firstItem="Koo-Qe-53i" firstAttribute="width" secondItem="KZ8-vE-Gc0" secondAttribute="width" id="kuS-gK-fnM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="o7Q-DX-mK6" secondAttribute="bottom" constant="-1" id="3ob-8B-tys"/>
+                <constraint firstAttribute="trailing" secondItem="o7Q-DX-mK6" secondAttribute="trailing" constant="-1" id="4vN-fC-hRu"/>
+                <constraint firstAttribute="trailing" secondItem="pbr-BI-cew" secondAttribute="trailing" id="CCl-fW-nZR"/>
+                <constraint firstItem="o7Q-DX-mK6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-1" id="JET-j4-1zl"/>
+                <constraint firstItem="pbr-BI-cew" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wwd-kI-hcG"/>
+                <constraint firstAttribute="bottom" secondItem="pbr-BI-cew" secondAttribute="bottom" constant="50" id="dUr-0m-MeM"/>
+                <constraint firstItem="pbr-BI-cew" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r0Y-sX-HBP"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

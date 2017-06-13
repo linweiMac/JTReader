@@ -98,7 +98,9 @@ class BookStoreCell: UITableViewCell {
     @IBAction func intoTypeClick(_ sender: UIButton) {
         
         print("进入频道详情")
-        
+        if model == nil {
+            return
+        }
         self.intoTypeDetail((model?.type)!, (model?.title)!)
     }
     

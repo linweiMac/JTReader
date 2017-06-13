@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import TMCache
 
 let kScreenW : CGFloat = UIScreen.main.bounds.width
 let kScreenH : CGFloat = UIScreen.main.bounds.height

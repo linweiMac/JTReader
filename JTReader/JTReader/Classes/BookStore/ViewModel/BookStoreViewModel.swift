@@ -101,14 +101,13 @@ extension BookStoreViewModel {
             
             //3.3获取主播数据
             for dict in dataArr {
-                let book = Book(dict: dict)
+                let book = Book.init(dict: dict)
                 self.schoolList.bookList.append(book)
             }
             
             //离开组
             dGroup.leave()
             print("请求到学校绘本数据")
-            
         }
 
         //所有数据都请求到

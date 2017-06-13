@@ -28,8 +28,6 @@ class CatagorySonVC: JTBaseViewController {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
         
-        print(categoryId+"------")
-        
         //1.处理界面
         setUpUI()
         
@@ -122,5 +120,15 @@ extension CatagorySonVC : UICollectionViewDelegate, UICollectionViewDataSource {
         return CGSize(width: 150, height: 190)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let model = dataArr[indexPath.row]
+        print(model.bookName);
+        
+        let vc = BookDetailVC()
+        vc.titleText = model.bookName
+        vc.showBook = model
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

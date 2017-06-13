@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Book: NSObject {
+class Book: BaseObject {
 
     /*
      allowed: 0
@@ -36,12 +36,20 @@ class Book: NSObject {
     
     var zipUrl = ""
     
+    var score = NSNumber()
+    
     var id = NSNumber()
     
     init(dict : [String : NSObject]) {
         super.init()
         
         setValuesForKeys(dict)
+        
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
