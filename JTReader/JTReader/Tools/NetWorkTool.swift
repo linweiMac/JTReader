@@ -12,6 +12,22 @@ import SwiftyJSON
 
 class NetWorkTool: NSObject {
     
+// MARK:- 获取热搜书本数据 book/hotBook
+    class func requestHotBookData (finishedCallback : @escaping (_ result: AnyObject) -> ()) {
+        
+        let parameters = ["schooId": "521"]
+        
+        self.requestData(URLString: "book/hotBook", parameters: parameters, finishedCallback: finishedCallback)
+    }
+    
+// MARK:- 搜索界面搜索书本 book/searchBook
+    class func starSearchBook (keyWord:String, finishedCallback : @escaping (_ result: AnyObject) -> ()) {
+        
+        let parameters = ["schooId": "521", "keyword":keyWord]
+        
+        self.requestData(URLString: "book/searchBook", parameters: parameters, finishedCallback: finishedCallback)
+    }
+    
 // MARK:-获取书本评论列表  book/queryCommentList
     class func requestBookCommentData (bookId:String, pageNum:String, finishedCallback : @escaping (_ result: AnyObject) -> ()) {
         
@@ -25,13 +41,13 @@ class NetWorkTool: NSObject {
         
         let parameters = ["schoolId":"521","type":type]
         
-        self.requestData(URLString: "book/queryCatalogList", parameters: parameters, finishedCallback: finishedCallback)
+        self.requestData(URLString: "book/queryCatalogGradeList", parameters: parameters, finishedCallback: finishedCallback)
     }
 
 // MARK:-获取各个分类下书目
     class func requestCatagoryData (type:String, catelogId:String, pageNum:String, pageSize:String, finishedCallback : @escaping (_ result: AnyObject) -> ()) {
         
-        let parameters = ["schoolId":"521", "userId":"134738", "type":type, "grade":"", "catalogId":catelogId,"pageNum":pageNum, "pageSize":pageSize]
+        let parameters = ["schoolId":"521", "userId":"134738", "type":type, "grade":"", "catalogId":catelogId, "isFree": "", "pageNum":pageNum, "pageSize":pageSize]
         
         self.requestData(URLString: "book/queryBookList", parameters: parameters, finishedCallback: finishedCallback)
     }
@@ -51,7 +67,7 @@ class NetWorkTool: NSObject {
     }
     
 // MARK:-总的请求方法
-    class func requestData(URLString: String, parameters: [String : String]? = nil, finishedCallback : @escaping (_ result: AnyObject) -> ()) {
+    fileprivate class func requestData(URLString: String, parameters: [String : String]? = nil, finishedCallback : @escaping (_ result: AnyObject) -> ()) {
         
         //获取类型
         let metod =  HTTPMethod.post

@@ -16,4 +16,5 @@ pod 'EDStarRating'
 pod 'MJRefresh'
 pod 'ZipArchive'
 pod 'TMCache'
+pod 'MBProgressHUD'
 end

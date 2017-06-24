@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import TMCache
 
 class BookShelfVC: JTBaseViewController {
 
@@ -21,6 +22,16 @@ class BookShelfVC: JTBaseViewController {
         
         setUpUI()
         
+        
+        var downBookArr = NSMutableArray() as! [Book]
+        
+        let downBookArrTemp = TMDiskCache.shared().object(forKey: "downBookArr") as? [Book]
+        
+        if downBookArrTemp == nil {
+            downBookArr = NSMutableArray() as! [Book]
+        } else {
+            downBookArr = NSMutableArray.init(array: downBookArrTemp!) as! [Book]
+        }
         
         
 //        NetWorkTool.requestBookListData(schoolId: "-9", userId: "125178", type: "Chinese", grade: "", catelogId: "", pageNum: "1") { (response) in
@@ -89,7 +100,12 @@ extension BookShelfVC {
     }
     
     @objc fileprivate func searchClick () {
-        print(#function) 
+        print(#function)
+        
+        let vc = SearchVC()
+        
+        self.navigationController?.pushViewController(vc, animated: false)
+        
     }
     
     

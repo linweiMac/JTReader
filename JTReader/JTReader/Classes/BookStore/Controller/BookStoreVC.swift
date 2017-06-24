@@ -68,6 +68,7 @@ extension BookStoreVC {
     fileprivate func setTableView () {
         
         self.tableView.register(UINib.init(nibName: "BookStoreCell", bundle: nil), forCellReuseIdentifier: "BookStoreCell")
+        self.tableView.register(UINib.init(nibName: "BookStoreLunboCell", bundle: nil), forCellReuseIdentifier: "BookStoreLunboCell")
         self.tableView.separatorStyle = .none
         self.tableView.showsVerticalScrollIndicator = false
     }
@@ -84,46 +85,71 @@ extension BookStoreVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if storeVM.listArr.count == 0 {
-            return 3
+            return 4
         }
-        return storeVM.listArr.count
+        return storeVM.listArr.count+1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookStoreCell") as! BookStoreCell
         
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "BookStoreLunboCell") as! BookStoreLunboCell
+        
         if storeVM.listArr.count == 0 {
-            return cell
+            if indexPath.row == 0 {
+                return cell1
+            } else {
+                return cell
+            }
+            
         } else {
             
-            let useModel = storeVM.listArr[indexPath.row]
-            
-            cell.model = useModel
-            cell.selectionStyle = .none
-            
-            cell.intoTypeDetail = { (type:String, title:String) -> () in
-                print("跳转进入详情页面")
-                let  vc = BookCatagoryVC()
-                vc.selfType = type
-                vc.titleText = title
-                self.navigationController?.pushViewController(vc, animated: true)
+            if indexPath.row == 0 {
+                cell1.carouseView.dataArr = storeVM.lunboData
+                return cell1
+                
+            } else {
+                
+                let useModel = storeVM.listArr[indexPath.row-1]
+                
+                cell.model = useModel
+                cell.selectionStyle = .none
+                
+                cell.intoTypeDetail = { (type:String, title:String) -> () in
+                    print("跳转进入详情页面")
+                    let  vc = BookCatagoryVC()
+                    vc.selfType = type
+                    vc.titleText = title
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
+                
+                cell.bookDetailBlock  = { (param:Book) -> () in
+                    
+                    print(param)
+                    let vc = BookDetailVC()
+                    vc.titleText = param.bookName
+                    vc.showBook = param
+                    self.navigationController?.pushViewController(vc, animated: true)
+                    
+                }
+                
+                return cell
+                
             }
             
-            cell.bookDetailBlock  = { (param:Book) -> () in
-                
-                print(param)
-                
-            }
             
-            return cell
             
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return kScreenW
+        
+        if indexPath.row == 0 {
+            return 108
+        } else {
+            return kScreenW
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookReadVC" customModule="JTReader" customModuleProvider="target">
             <connections>
+                <outlet property="showImg" destination="gjE-hP-2gj" id="GEs-S9-LGk"/>
+                <outlet property="showView" destination="4ag-px-VK5" id="7kf-ny-wjE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,6 +21,17 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ag-px-VK5">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gjE-hP-2gj">
+                            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpF-Pc-Z0a">
                     <rect key="frame" x="8" y="8" width="44" height="44"/>
                     <color key="backgroundColor" red="0.080722046300141306" green="0.12073683375634514" blue="0.092599794137748076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,6 +50,7 @@
                 <constraint firstItem="RpF-Pc-Z0a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="ASx-Xn-Akb"/>
                 <constraint firstItem="RpF-Pc-Z0a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="zEX-oC-ov1"/>
             </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

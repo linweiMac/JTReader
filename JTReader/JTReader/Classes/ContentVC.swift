@@ -10,16 +10,14 @@ import UIKit
 
 class ContentVC: JTBaseViewController {
     @IBOutlet var contentView: UIView!
-
-    @IBOutlet var carouselView: JTCarouselView!
-    
-    @IBOutlet var carouselHeight: NSLayoutConstraint!
     
     fileprivate var titleV = UILabel()
     
     var storeVC = BookStoreVC()
+    @IBOutlet var storeBtn: UIButton!
     
     var circleVC = CircleVC()
+    @IBOutlet var circleBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +25,10 @@ class ContentVC: JTBaseViewController {
         setUpUI()
         self.automaticallyAdjustsScrollViewInsets = false
         
-        getLuboData()
-        
-        carouselView.delegate = self as JTCarouseViewDelegate
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -42,9 +39,10 @@ class ContentVC: JTBaseViewController {
         if storeVC.view.isHidden {
             storeVC.view.isHidden = false
             circleVC.view.isHidden = true
+            sender.isSelected = true
+            circleBtn.isSelected = false
         }
         titleV.text = "书城"
-        carouselHeight.constant = 108
     }
     
     @IBAction func circleClick(_ sender: UIButton) {
@@ -52,15 +50,14 @@ class ContentVC: JTBaseViewController {
         if circleVC.view.isHidden {
             circleVC.view.isHidden = false
             storeVC.view.isHidden = true
+            sender.isSelected = true
+            storeBtn.isSelected = false
         }
         titleV.text = "圈子"
-        carouselHeight.constant = 0
-        
     }
 }
 
-
-extension ContentVC : JTCarouseViewDelegate {
+extension ContentVC {
     
     fileprivate func setUpUI () {
         
@@ -108,32 +105,6 @@ extension ContentVC : JTCarouseViewDelegate {
     @objc fileprivate func backClick () {
         
         self.navigationController?.popViewController(animated: true)
-    }
-    
-    // MARK:-轮播图数据获取
-    fileprivate func getLuboData() {
-        
-        NetWorkTool.requestBookStoreLuoboData { (result) in
-            
-            //1.将result转成字典
-            guard let resultDict = result as? [String : NSObject] else { return }
-            
-            //2.取出数组
-            guard let dataArr = resultDict["list"] as? [[String : NSObject]] else { return }
-            
-            //3.遍历字典，并且转成模型对象
-            var dataResources = [String]()
-            for dict in dataArr {
-                let banner = dict["imageUrl"] as! String
-                dataResources.append(banner)
-            }
-            
-            self.carouselView.dataArr = dataResources
-        }
-    }
-    
-    func carouseView(_ carouseView: JTCarouselView, selectedIndex index: Int) {
-        print(index)
     }
 }
 

@@ -56,7 +56,7 @@ class BookDetailVC: JTBaseViewController {
     @IBAction func downloadBtnClick(_ sender: UIButton) {
         
         let vc = BookReadVC()
-        vc.bookId = self.showBook.id.stringValue
+        vc.showBook = self.showBook
         self.navigationController?.pushViewController(vc, animated: false)
     }
 

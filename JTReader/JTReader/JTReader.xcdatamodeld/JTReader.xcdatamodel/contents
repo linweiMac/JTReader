@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="BookDetail" representedClassName="BookDetail" syncable="YES" codeGenerationType="class">
-        <attribute name="bookType" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="isSilent" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="page_book" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PageContent" syncable="YES"/>
-    </entity>
-    <entity name="PageContent" representedClassName="PageContent" parentEntity="BookDetail" syncable="YES" codeGenerationType="class">
-        <attribute name="englishUrl" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="mp3Url" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="pageNo" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="book_page" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BookDetail" syncable="YES"/>
-    </entity>
-    <elements>
-        <element name="BookDetail" positionX="-200" positionY="131" width="128" height="103"/>
-        <element name="PageContent" positionX="-423" positionY="-180" width="128" height="133"/>
-    </elements>
+    <elements/>
 </model>

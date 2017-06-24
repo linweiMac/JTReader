@@ -12,4 +12,6 @@
 
 - (void)updateModelWithJsonDic:(NSDictionary*)jsonDic;
 
+- (id)initWithCoder:(NSCoder *)aDecoder;
+
 @end

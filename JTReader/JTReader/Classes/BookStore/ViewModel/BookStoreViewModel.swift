@@ -12,6 +12,8 @@ class BookStoreViewModel: NSObject {
     
     lazy var listArr = [channelModel]()
     
+    lazy var lunboData = [String]()
+    
     fileprivate lazy var chinaList = channelModel()
     fileprivate lazy var englishList = channelModel()
     fileprivate lazy var schoolList = channelModel()
@@ -110,6 +112,32 @@ extension BookStoreViewModel {
             print("请求到学校绘本数据")
         }
 
+        //进入组
+        dGroup.enter()
+        // MARK:-轮播图数据获取
+        NetWorkTool.requestBookStoreLuoboData { (result) in
+            
+            //1.将result转成字典
+            guard let resultDict = result as? [String : NSObject] else { return }
+            
+            //2.取出数组
+            guard let dataArr = resultDict["list"] as? [[String : NSObject]] else { return }
+            
+            //3.遍历字典，并且转成模型对象
+            var dataResources = [String]()
+            for dict in dataArr {
+                let banner = dict["imageUrl"] as! String
+                dataResources.append(banner)
+            }
+            
+            self.lunboData = dataResources
+            
+            //离开组
+            dGroup.leave()
+            print("请求到轮播图数据")
+        }
+        
+        
         //所有数据都请求到
         dGroup.notify(queue: DispatchQueue.main) {
             print("所有数据都请求到了")

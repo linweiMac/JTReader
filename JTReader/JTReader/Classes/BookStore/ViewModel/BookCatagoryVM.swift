@@ -26,7 +26,7 @@ extension BookCatagoryVM {
             guard let resultDict = result as? [String : NSObject] else { return }
             
             //2.取出数组
-            guard let dataArr = resultDict["list"] as? [[String : NSObject]] else { return }
+            guard let dataArr = resultDict["catalogList"] as? [[String : NSObject]] else { return }
             
             //3.遍历字典，并且转成模型对象
             for dict in dataArr {

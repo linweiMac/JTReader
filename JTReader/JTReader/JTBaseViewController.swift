@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
+class JTBaseViewController: UIViewController, AVAudioPlayerDelegate {
 
-class JTBaseViewController: UIViewController {
-
+    public var soundPlayer : AVAudioPlayer?
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,4 +26,20 @@ class JTBaseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    public func playSound(musicPath : String, with delegate : Bool) {
+        
+        
+        soundPlayer?.stop()
+        soundPlayer = nil
+        
+        let url = URL.init(fileURLWithPath: musicPath)
+        
+        soundPlayer = try? AVAudioPlayer.init(contentsOf: url)
+        
+        if delegate {
+            soundPlayer?.delegate = self as AVAudioPlayerDelegate
+        }
+        soundPlayer?.play()
+    }
+    
 }
