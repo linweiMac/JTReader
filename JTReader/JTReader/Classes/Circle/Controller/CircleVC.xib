@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CircleVC" customModule="JTReader" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="y3Z-32-PH2" id="YdV-ui-JSM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="eqb-XR-gVo"/>
             </connections>
         </placeholder>
@@ -21,17 +22,12 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y3Z-32-PH2">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.90970492362976074" green="0.90986090898513794" blue="0.9096950888633728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="nym-lW-kw2"/>
+                        <outlet property="delegate" destination="-1" id="eJ0-p9-k3C"/>
+                    </connections>
                 </tableView>
-                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" translatesAutoresizingMaskIntoConstraints="NO" id="rgI-Qj-JGn">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                    <autoresizingMask key="autoresizingMask"/>
-                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rgI-Qj-JGn" id="71W-ID-rTZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </tableViewCellContentView>
-                    <color key="backgroundColor" red="0.65443424496592828" green="0.69803921568627447" blue="0.60577410350532412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </tableViewCell>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>

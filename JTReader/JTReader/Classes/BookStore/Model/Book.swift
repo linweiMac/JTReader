@@ -61,4 +61,29 @@ class Book: BaseObject {
         
     }
     
+    
+    public func initSelf(downBook : DownloadBook) {
+        /*var catalogName = ""
+         
+         var bookName = ""
+         
+         var bookIcon = ""
+         
+         var bookDesc = ""
+         
+         var zipUrl = ""
+         
+         var score = NSNumber()
+         
+         var id = NSNumber()*/
+        self.bookName = downBook.bookName!
+        self.catalogName = downBook.catalogName!
+        self.bookIcon = downBook.bookIcon!
+        self.bookDesc = downBook.bookDesc!
+        self.zipUrl = downBook.zipUrl!
+        self.score = NSNumber.init(value: downBook.score)
+        self.id = NSNumber.init(value: downBook.id)
+        
+    }
+    
 }

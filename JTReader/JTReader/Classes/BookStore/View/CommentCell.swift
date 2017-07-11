@@ -40,6 +40,13 @@ class CommentCell: UITableViewCell {
         self.userLogo.clipsToBounds = true
         self.userLogo.layer.cornerRadius = 30
         
+        self.starRating.backgroundColor = UIColor.clear
+        self.starRating.starImage = UIImage.init(named: "comment_starN")
+        self.starRating.starHighlightedImage = UIImage.init(named: "comment_starS")
+        self.starRating.maxRating = Int(5.0)
+        self.starRating.horizontalMargin = 0
+        self.starRating.editable = false
+        self.starRating.displayMode = UInt(EDStarRatingDisplayAccurate)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -58,6 +65,8 @@ class CommentCell: UITableViewCell {
         self.userName.text = model.userName
         self.timeLbl.text = model.createTime
         self.contentLbl.text = model.content
+        
+        starRating.rating = Float(model.score)
     }
     
     

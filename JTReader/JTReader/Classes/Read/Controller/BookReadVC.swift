@@ -25,6 +25,8 @@ class BookReadVC: JTBaseViewController, JTDownLoadToolDelegate {
     
     var downLoadTool = JTDownLoadTool()
     
+    var coredataTool = JTCoreDataTool()
+    
     var loadingView : DownLoadView?
     var timer : Timer?
     var rate = 0.01
@@ -36,6 +38,9 @@ class BookReadVC: JTBaseViewController, JTDownLoadToolDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        // MARK:-横竖屏设置
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.allowRotation = 1 //1表示支持横竖屏
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
         
@@ -55,10 +60,6 @@ class BookReadVC: JTBaseViewController, JTDownLoadToolDelegate {
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = true
-        
-        // MARK:-横竖屏设置
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.allowRotation = 1 //1表示支持横竖屏
         
         // MARK:- 判断是否已下载书本
         judgeIsDownLoad()
@@ -98,7 +99,6 @@ class BookReadVC: JTBaseViewController, JTDownLoadToolDelegate {
             
             let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true)
             let documentPath = paths[0]
-//            let filePath = documentPath + "zip/" + showBook.id.stringValue + ".zip"
             
             let filePath = documentPath.appendingFormat("/zip/book%@.zip", showBook.id.stringValue)
             
@@ -151,24 +151,11 @@ class BookReadVC: JTBaseViewController, JTDownLoadToolDelegate {
         else if status == 3 {
             print("下载完成了")
             
-            var downBookArr = NSMutableArray() as! [Book]
+            //本地持久化存储已下载书本信息
+            coredataTool.addCoreData(saveBook: showBook)
             
-            let downBookArrTemp = TMDiskCache.shared().object(forKey: "downBookArr") as? [Book]
-            
-            if downBookArrTemp == nil {
-                downBookArr = NSMutableArray() as! [Book]
-            } else {
-                downBookArr = NSMutableArray.init(array: downBookArrTemp!) as! [Book]
-            }
-            
-            for book in downBookArr {
-                if (book.id .isEqual(to: showBook.id)) {
-                    return
-                }
-            }
-            
-            downBookArr.append(showBook)
-            TMDiskCache.shared().setObject(downBookArr as NSCoding, forKey: "downBookArr")
+            let arr = coredataTool.printAllDataWithCoreData()
+            print(arr.first?.bookName ?? "")
             
             //保存已下载记录
             TMDiskCache.shared().setObject(showBook, forKey: showBook.bookName)
@@ -254,7 +241,6 @@ class BookReadVC: JTBaseViewController, JTDownLoadToolDelegate {
         let arr = jsonDic["contents"] as? [[String : NSObject]]
         
         for dic in arr! {
-            
             let pageContent = PageContent.init(dict : dic )
             pageContentArr.append(pageContent)
         }
@@ -266,7 +252,6 @@ class BookReadVC: JTBaseViewController, JTDownLoadToolDelegate {
         rightSwip.direction = .right
         
         showImg.isUserInteractionEnabled = true
-        
         showImg.addGestureRecognizer(leftSwip)
         showImg.addGestureRecognizer(rightSwip)
         

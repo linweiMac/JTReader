@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class BookDetailVC: JTBaseViewController {
 
     public var titleText : String!
@@ -39,7 +38,6 @@ class BookDetailVC: JTBaseViewController {
         
         getBookCommentData()
         
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +48,9 @@ class BookDetailVC: JTBaseViewController {
     // MARK:-配音按钮点击
     @IBAction func dubBtnClick(_ sender: UIButton) {
         
+        let vc = DubVC()
+        
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK:-下载/阅读点击
@@ -59,7 +60,6 @@ class BookDetailVC: JTBaseViewController {
         vc.showBook = self.showBook
         self.navigationController?.pushViewController(vc, animated: false)
     }
-
 }
 
 // MARK:-UI
@@ -106,6 +106,9 @@ extension BookDetailVC {
         self.tableView.separatorStyle = .none
         self.tableView.showsVerticalScrollIndicator = false
         
+        
+        let footer = MJGifFooter(refreshingTarget: self, refreshingAction: #selector(loadMore))
+        self.tableView.mj_footer = footer
     }
     
     //3.设置下部功能view
@@ -126,6 +129,12 @@ extension BookDetailVC {
 // MARK:-数据
 extension BookDetailVC {
     
+    func loadMore(){
+        
+        //上拉加载
+        pageNum += 1;
+        self.getBookCommentData()
+    }
     
     func getBookCommentData() {
         
@@ -147,7 +156,6 @@ extension BookDetailVC {
             }
             
             self.tableView.reloadData()
-            
         }
     }
 }
@@ -210,6 +218,20 @@ extension BookDetailVC : UITableViewDelegate, UITableViewDataSource {
         
         let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "CommentHeaderCell") as! CommentHeaderCell
         view.score = showBook.score as? CGFloat
+        
+        view.beginComment = { [weak self] in
+            print("开始评论")
+//            [nav setModalPresentationStyle:UIModalPresentationOverCurrentContext];
+            let vc = CommentVC()
+            vc.showBook = self?.showBook
+            vc.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+            self?.present(vc, animated: false, completion: { 
+                
+                vc.bookImg.kf.setImage(with: URL(string: (self?.showBook.bookIcon)!), placeholder: UIImage.init(named: "default_img.jpg"))
+                vc.bookNameLbl.text = self?.showBook.bookName
+                vc.bookCategoryLbl.text = self?.showBook.catalogName
+            })
+        }
         
         return view
     }

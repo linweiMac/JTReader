@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReadContentVC" customModule="JTReader" customModuleProvider="target">
+            <connections>
+                <outlet property="showImg" destination="BmA-eE-4ua" id="4FA-cF-eDC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BmA-eE-4ua">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BmA-eE-4ua" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HDt-M1-5cG"/>
+                <constraint firstItem="BmA-eE-4ua" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OvP-7I-PPX"/>
+                <constraint firstAttribute="bottom" secondItem="BmA-eE-4ua" secondAttribute="bottom" id="hDJ-1i-bav"/>
+                <constraint firstAttribute="trailing" secondItem="BmA-eE-4ua" secondAttribute="trailing" id="kF7-oc-CPq"/>
+            </constraints>
+            <point key="canvasLocation" x="68" y="56"/>
+        </view>
+    </objects>
+</document>

@@ -12,7 +12,7 @@ class BookStoreViewModel: NSObject {
     
     lazy var listArr = [channelModel]()
     
-    lazy var lunboData = [String]()
+    lazy var lunboData = [LunboModel]()
     
     fileprivate lazy var chinaList = channelModel()
     fileprivate lazy var englishList = channelModel()
@@ -124,10 +124,10 @@ extension BookStoreViewModel {
             guard let dataArr = resultDict["list"] as? [[String : NSObject]] else { return }
             
             //3.遍历字典，并且转成模型对象
-            var dataResources = [String]()
+            var dataResources = [LunboModel]()
             for dict in dataArr {
-                let banner = dict["imageUrl"] as! String
-                dataResources.append(banner)
+                let lunboD = LunboModel.init(dict: dict)
+                dataResources.append(lunboD)
             }
             
             self.lunboData = dataResources

@@ -93,8 +93,10 @@ extension BookStoreVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookStoreCell") as! BookStoreCell
+        cell.selectionStyle = .none
         
         let cell1 = tableView.dequeueReusableCell(withIdentifier: "BookStoreLunboCell") as! BookStoreLunboCell
+        cell1.selectionStyle = .none
         
         if storeVM.listArr.count == 0 {
             if indexPath.row == 0 {
@@ -107,6 +109,12 @@ extension BookStoreVC: UITableViewDelegate, UITableViewDataSource {
             
             if indexPath.row == 0 {
                 cell1.carouseView.dataArr = storeVM.lunboData
+                
+                cell1.lunboClick = { (model : LunboModel) -> () in
+                    
+                    self.activityToVC(lunboModel: model)
+                }
+                
                 return cell1
                 
             } else {
@@ -133,13 +141,8 @@ extension BookStoreVC: UITableViewDelegate, UITableViewDataSource {
                     self.navigationController?.pushViewController(vc, animated: true)
                     
                 }
-                
                 return cell
-                
             }
-            
-            
-            
         }
     }
     
@@ -154,6 +157,17 @@ extension BookStoreVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0
+    }
+    
+// MARK:- 轮播图点击跳转
+    func activityToVC (lunboModel : LunboModel) {
+        
+        if lunboModel.type == "link" {
+            
+            let vc = ActivityVC()
+            vc.linkUrl = lunboModel.content
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 

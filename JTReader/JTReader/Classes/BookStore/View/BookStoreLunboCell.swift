@@ -12,6 +12,8 @@ class BookStoreLunboCell: UITableViewCell, JTCarouseViewDelegate {
     
     @IBOutlet var carouseView: JTCarouselView!
     
+    // MARK:-轮播图点击
+    var lunboClick : (LunboModel) -> () = {param in}
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,8 +23,9 @@ class BookStoreLunboCell: UITableViewCell, JTCarouseViewDelegate {
         
     }
 
-    func carouseView(_ carouseView: JTCarouselView, selectedIndex index: Int) {
-        print(index)
+    func carouseView(_ carouseView: JTCarouselView, selectedIndex lunboModel: LunboModel) {
+        
+        self.lunboClick(lunboModel)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

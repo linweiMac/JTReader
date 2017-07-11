@@ -4,3 +4,8 @@
 
 #import "BaseObject.h"
 
+#import "BookLayout_OC.h" 
+
+#import "ProductBookShelfDecorationView.h"
+
+#import "ProductBookShelfFlowLayout.h"

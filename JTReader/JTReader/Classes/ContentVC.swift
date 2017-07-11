@@ -100,6 +100,9 @@ extension ContentVC {
     
     @objc fileprivate func searchClick () {
         print(#function)
+        
+        let vc = SearchVC()
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     @objc fileprivate func backClick () {

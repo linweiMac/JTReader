@@ -42,4 +42,22 @@ class JTBaseViewController: UIViewController, AVAudioPlayerDelegate {
         soundPlayer?.play()
     }
     
+    //屏幕截图
+    public func screenShot() -> (UIImage) {
+        
+//        guard let window = UIApplication.shared().keyWindow else { return nil }
+        
+        let window = UIApplication.shared.keyWindow
+        // 用下面这行而不是UIGraphicsBeginImageContext()，因为前者支持Retina
+        UIGraphicsBeginImageContextWithOptions((window?.bounds.size)!, false, 0.0)
+        
+        window?.layer.render(in: UIGraphicsGetCurrentContext()!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return image!
+    }
+    
 }

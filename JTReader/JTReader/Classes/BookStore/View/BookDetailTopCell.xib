@@ -86,7 +86,7 @@
                 <outlet property="bookNameLbl" destination="3fT-ZR-sQQ" id="bRm-dP-oej"/>
                 <outlet property="typeLbl" destination="cyX-cU-eVo" id="uTF-Lw-n1J"/>
             </connections>
-            <point key="canvasLocation" x="57" y="95.5"/>
+            <point key="canvasLocation" x="57" y="95"/>
         </tableViewCell>
     </objects>
     <resources>

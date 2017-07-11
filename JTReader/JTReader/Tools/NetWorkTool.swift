@@ -12,6 +12,16 @@ import SwiftyJSON
 
 class NetWorkTool: NSObject {
     
+// MARK: - 获取圈子首页数据
+    class func requestCircleData (circleId:String, pageNumber:String, finishedCallback : @escaping (_ result: AnyObject) -> ()) {
+        
+        let parameters = ["circleId": circleId, "pageNumber": pageNumber, "userId": "134738"]
+        
+        self.requestData(URLString: "circle/querySendList", parameters: parameters, finishedCallback: finishedCallback)
+    }
+    
+    
+    
 // MARK:- 获取热搜书本数据 book/hotBook
     class func requestHotBookData (finishedCallback : @escaping (_ result: AnyObject) -> ()) {
         

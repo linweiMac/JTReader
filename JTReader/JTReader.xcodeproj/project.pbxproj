@@ -12,13 +12,47 @@
 		C809FBC01EC3614B006CE0E7 /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C809FBBE1EC3614B006CE0E7 /* BookCell.xib */; };
 		C8127B1C1EEA8A73008BFA8C /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C8127B1B1EEA8A73008BFA8C /* BaseObject.m */; };
 		C813315F1EF927DD0081BDB4 /* PageContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C813315E1EF927DD0081BDB4 /* PageContent.swift */; };
+		C81419C31F0CD8BB00E631CA /* LunboModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81419C21F0CD8BB00E631CA /* LunboModel.swift */; };
+		C81419C61F0CDE6100E631CA /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81419C41F0CDE6100E631CA /* ActivityVC.swift */; };
+		C81419C71F0CDE6100E631CA /* ActivityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81419C51F0CDE6100E631CA /* ActivityVC.xib */; };
+		C81419D21F0CE5D500E631CA /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81419D01F0CE5D500E631CA /* SettingVC.swift */; };
+		C81419D31F0CE5D500E631CA /* SettingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C81419D11F0CE5D500E631CA /* SettingVC.xib */; };
 		C81CA7881EF2CC5400E18847 /* JTDownLoadMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81CA7871EF2CC5400E18847 /* JTDownLoadMode.swift */; };
+		C821DC8B1F0F2B6C00A47ECC /* DubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C821DC891F0F2B6C00A47ECC /* DubVC.swift */; };
+		C821DC8C1F0F2B6C00A47ECC /* DubVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C821DC8A1F0F2B6C00A47ECC /* DubVC.xib */; };
 		C8275DED1EB8324F00B7D7E1 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8275DEC1EB8324F00B7D7E1 /* NetWorkTool.swift */; };
 		C8275DEF1EB8327900B7D7E1 /* JTBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8275DEE1EB8327900B7D7E1 /* JTBaseViewController.swift */; };
 		C8275DF11EB86BE400B7D7E1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8275DF01EB86BE400B7D7E1 /* Common.swift */; };
 		C8275E061EB8807700B7D7E1 /* BookStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8275E041EB8807700B7D7E1 /* BookStoreVC.swift */; };
 		C8275E071EB8807700B7D7E1 /* BookStoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8275E051EB8807700B7D7E1 /* BookStoreVC.xib */; };
 		C8275E0A1EB880A400B7D7E1 /* BookShelfVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8275E081EB880A400B7D7E1 /* BookShelfVC.swift */; };
+		C82E3AE81F13582900D327CC /* CircleTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82E3AE61F13582900D327CC /* CircleTextCell.swift */; };
+		C82E3AE91F13582900D327CC /* CircleTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82E3AE71F13582900D327CC /* CircleTextCell.xib */; };
+		C82E3AEC1F13583900D327CC /* CircleObjcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82E3AEA1F13583900D327CC /* CircleObjcCell.swift */; };
+		C82E3AED1F13583900D327CC /* CircleObjcCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82E3AEB1F13583900D327CC /* CircleObjcCell.xib */; };
+		C82E3AF01F135CDB00D327CC /* CircleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82E3AEE1F135CDB00D327CC /* CircleImageCell.swift */; };
+		C82E3AF11F135CDB00D327CC /* CircleImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C82E3AEF1F135CDB00D327CC /* CircleImageCell.xib */; };
+		C82E3AF41F137E5400D327CC /* CircleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82E3AF31F137E5400D327CC /* CircleModel.swift */; };
+		C83BFB301F14C30B00D2ECBF /* CircleTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BFB2E1F14C30B00D2ECBF /* CircleTopCell.swift */; };
+		C83BFB311F14C30B00D2ECBF /* CircleTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83BFB2F1F14C30B00D2ECBF /* CircleTopCell.xib */; };
+		C83BFB341F14C6F200D2ECBF /* ShareDubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83BFB331F14C6F200D2ECBF /* ShareDubModel.swift */; };
+		C83C6BAF1F0BDEFD002CD84C /* ShelfReadVCTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83C6BAD1F0BDEFD002CD84C /* ShelfReadVCTwo.swift */; };
+		C83C6BB01F0BDEFD002CD84C /* ShelfReadVCTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83C6BAE1F0BDEFD002CD84C /* ShelfReadVCTwo.xib */; };
+		C83C6BB31F0BE3DB002CD84C /* ReadContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83C6BB11F0BE3DB002CD84C /* ReadContentVC.swift */; };
+		C83C6BB41F0BE3DB002CD84C /* ReadContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83C6BB21F0BE3DB002CD84C /* ReadContentVC.xib */; };
+		C83E0E6D1F0337A300AC00FF /* PageContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E0E6B1F0337A300AC00FF /* PageContentCell.swift */; };
+		C83E0E6E1F0337A300AC00FF /* PageContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83E0E6C1F0337A300AC00FF /* PageContentCell.xib */; };
+		C83E0E711F034CA200AC00FF /* ShelfReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E0E6F1F034CA200AC00FF /* ShelfReadVC.swift */; };
+		C83E0E721F034CA200AC00FF /* ShelfReadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83E0E701F034CA200AC00FF /* ShelfReadVC.xib */; };
+		C83E0E751F0355C000AC00FF /* BookLayout_OC.m in Sources */ = {isa = PBXBuildFile; fileRef = C83E0E741F0355C000AC00FF /* BookLayout_OC.m */; };
+		C83E0E7B1F03868A00AC00FF /* ProductBookShelfDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C83E0E781F03868A00AC00FF /* ProductBookShelfDecorationView.m */; };
+		C83E0E7C1F03868A00AC00FF /* ProductBookShelfFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C83E0E7A1F03868A00AC00FF /* ProductBookShelfFlowLayout.m */; };
+		C83E0E7E1F03A01800AC00FF /* BookShelfVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83E0E7D1F03A01800AC00FF /* BookShelfVC.xib */; };
+		C83E0E811F03A12A00AC00FF /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E0E7F1F03A12A00AC00FF /* UserVC.swift */; };
+		C83E0E821F03A12A00AC00FF /* UserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83E0E801F03A12A00AC00FF /* UserVC.xib */; };
+		C84651511F06285C00DE00F6 /* CALayer+JTXibBorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84651501F06285C00DE00F6 /* CALayer+JTXibBorderColor.swift */; };
+		C84651541F063D7100DE00F6 /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84651521F063D7100DE00F6 /* CommentVC.swift */; };
+		C84651551F063D7100DE00F6 /* CommentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C84651531F063D7100DE00F6 /* CommentVC.xib */; };
 		C84A5CCF1EBC4F64009A9EB2 /* BookStoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84A5CCD1EBC4F64009A9EB2 /* BookStoreCell.swift */; };
 		C84A5CD01EBC4F64009A9EB2 /* BookStoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C84A5CCE1EBC4F64009A9EB2 /* BookStoreCell.xib */; };
 		C84A5CD21EBC5C94009A9EB2 /* BookStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84A5CD11EBC5C94009A9EB2 /* BookStoreViewModel.swift */; };
@@ -56,11 +90,14 @@
 		C8CEACD31EBEFA620028DCF6 /* BookReadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8CEACD11EBEFA620028DCF6 /* BookReadVC.xib */; };
 		C8CEACD61EBF13B60028DCF6 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CEACD41EBF13B60028DCF6 /* PageContentView.swift */; };
 		C8CEACD71EBF13B60028DCF6 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CEACD51EBF13B60028DCF6 /* PageTitleView.swift */; };
+		C8D002251F0E8C2F0051B93F /* MJGifHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D002241F0E8C2F0051B93F /* MJGifHeader.swift */; };
+		C8D002271F0E8C4C0051B93F /* MJGifFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D002261F0E8C4C0051B93F /* MJGifFooter.swift */; };
 		C8D8BB9F1EE44C7B007BC167 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D8BB9E1EE44C7B007BC167 /* CommentModel.swift */; };
 		C8E1D0A71EFCC08C000AF3FA /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1D0A51EFCC08C000AF3FA /* SearchVC.swift */; };
 		C8E1D0A81EFCC08C000AF3FA /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8E1D0A61EFCC08C000AF3FA /* SearchVC.xib */; };
 		C8E1D0AF1EFCFC1A000AF3FA /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E1D0AD1EFCFC1A000AF3FA /* SearchCell.swift */; };
 		C8E1D0B01EFCFC1A000AF3FA /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8E1D0AE1EFCFC1A000AF3FA /* SearchCell.xib */; };
+		C8E623761F010333004E374D /* JTCoreDataTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E623751F010333004E374D /* JTCoreDataTool.swift */; };
 		C8F4620A1EEFD88B00D561B4 /* DownLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F462091EEFD88B00D561B4 /* DownLoadView.swift */; };
 		C8F812491ED55FB60048487F /* BookDetailTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F812471ED55FB60048487F /* BookDetailTopCell.swift */; };
 		C8F8124A1ED55FB60048487F /* BookDetailTopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8F812481ED55FB60048487F /* BookDetailTopCell.xib */; };
@@ -78,13 +115,50 @@
 		C8127B1A1EEA8A73008BFA8C /* BaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
 		C8127B1B1EEA8A73008BFA8C /* BaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
 		C813315E1EF927DD0081BDB4 /* PageContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContent.swift; sourceTree = "<group>"; };
+		C81419C21F0CD8BB00E631CA /* LunboModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LunboModel.swift; sourceTree = "<group>"; };
+		C81419C41F0CDE6100E631CA /* ActivityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
+		C81419C51F0CDE6100E631CA /* ActivityVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityVC.xib; sourceTree = "<group>"; };
+		C81419D01F0CE5D500E631CA /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		C81419D11F0CE5D500E631CA /* SettingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingVC.xib; sourceTree = "<group>"; };
 		C81CA7871EF2CC5400E18847 /* JTDownLoadMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTDownLoadMode.swift; sourceTree = "<group>"; };
+		C821DC891F0F2B6C00A47ECC /* DubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DubVC.swift; sourceTree = "<group>"; };
+		C821DC8A1F0F2B6C00A47ECC /* DubVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DubVC.xib; sourceTree = "<group>"; };
 		C8275DEC1EB8324F00B7D7E1 /* NetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
 		C8275DEE1EB8327900B7D7E1 /* JTBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTBaseViewController.swift; sourceTree = "<group>"; };
 		C8275DF01EB86BE400B7D7E1 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C8275E041EB8807700B7D7E1 /* BookStoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookStoreVC.swift; sourceTree = "<group>"; };
 		C8275E051EB8807700B7D7E1 /* BookStoreVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookStoreVC.xib; sourceTree = "<group>"; };
 		C8275E081EB880A400B7D7E1 /* BookShelfVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookShelfVC.swift; sourceTree = "<group>"; };
+		C82E3AE61F13582900D327CC /* CircleTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTextCell.swift; sourceTree = "<group>"; };
+		C82E3AE71F13582900D327CC /* CircleTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleTextCell.xib; sourceTree = "<group>"; };
+		C82E3AEA1F13583900D327CC /* CircleObjcCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleObjcCell.swift; sourceTree = "<group>"; };
+		C82E3AEB1F13583900D327CC /* CircleObjcCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleObjcCell.xib; sourceTree = "<group>"; };
+		C82E3AEE1F135CDB00D327CC /* CircleImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImageCell.swift; sourceTree = "<group>"; };
+		C82E3AEF1F135CDB00D327CC /* CircleImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleImageCell.xib; sourceTree = "<group>"; };
+		C82E3AF31F137E5400D327CC /* CircleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleModel.swift; sourceTree = "<group>"; };
+		C83BFB2E1F14C30B00D2ECBF /* CircleTopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTopCell.swift; sourceTree = "<group>"; };
+		C83BFB2F1F14C30B00D2ECBF /* CircleTopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CircleTopCell.xib; sourceTree = "<group>"; };
+		C83BFB331F14C6F200D2ECBF /* ShareDubModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareDubModel.swift; sourceTree = "<group>"; };
+		C83C6BAD1F0BDEFD002CD84C /* ShelfReadVCTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelfReadVCTwo.swift; sourceTree = "<group>"; };
+		C83C6BAE1F0BDEFD002CD84C /* ShelfReadVCTwo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShelfReadVCTwo.xib; sourceTree = "<group>"; };
+		C83C6BB11F0BE3DB002CD84C /* ReadContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadContentVC.swift; sourceTree = "<group>"; };
+		C83C6BB21F0BE3DB002CD84C /* ReadContentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadContentVC.xib; sourceTree = "<group>"; };
+		C83E0E6B1F0337A300AC00FF /* PageContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentCell.swift; sourceTree = "<group>"; };
+		C83E0E6C1F0337A300AC00FF /* PageContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageContentCell.xib; sourceTree = "<group>"; };
+		C83E0E6F1F034CA200AC00FF /* ShelfReadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelfReadVC.swift; sourceTree = "<group>"; };
+		C83E0E701F034CA200AC00FF /* ShelfReadVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShelfReadVC.xib; sourceTree = "<group>"; };
+		C83E0E731F0355C000AC00FF /* BookLayout_OC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookLayout_OC.h; sourceTree = "<group>"; };
+		C83E0E741F0355C000AC00FF /* BookLayout_OC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookLayout_OC.m; sourceTree = "<group>"; };
+		C83E0E771F03868A00AC00FF /* ProductBookShelfDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductBookShelfDecorationView.h; sourceTree = "<group>"; };
+		C83E0E781F03868A00AC00FF /* ProductBookShelfDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductBookShelfDecorationView.m; sourceTree = "<group>"; };
+		C83E0E791F03868A00AC00FF /* ProductBookShelfFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductBookShelfFlowLayout.h; sourceTree = "<group>"; };
+		C83E0E7A1F03868A00AC00FF /* ProductBookShelfFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductBookShelfFlowLayout.m; sourceTree = "<group>"; };
+		C83E0E7D1F03A01800AC00FF /* BookShelfVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookShelfVC.xib; sourceTree = "<group>"; };
+		C83E0E7F1F03A12A00AC00FF /* UserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
+		C83E0E801F03A12A00AC00FF /* UserVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserVC.xib; sourceTree = "<group>"; };
+		C84651501F06285C00DE00F6 /* CALayer+JTXibBorderColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+JTXibBorderColor.swift"; sourceTree = "<group>"; };
+		C84651521F063D7100DE00F6 /* CommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
+		C84651531F063D7100DE00F6 /* CommentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentVC.xib; sourceTree = "<group>"; };
 		C84A5CCD1EBC4F64009A9EB2 /* BookStoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookStoreCell.swift; sourceTree = "<group>"; };
 		C84A5CCE1EBC4F64009A9EB2 /* BookStoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookStoreCell.xib; sourceTree = "<group>"; };
 		C84A5CD11EBC5C94009A9EB2 /* BookStoreViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookStoreViewModel.swift; sourceTree = "<group>"; };
@@ -124,11 +198,14 @@
 		C8CEACD11EBEFA620028DCF6 /* BookReadVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookReadVC.xib; sourceTree = "<group>"; };
 		C8CEACD41EBF13B60028DCF6 /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		C8CEACD51EBF13B60028DCF6 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		C8D002241F0E8C2F0051B93F /* MJGifHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJGifHeader.swift; sourceTree = "<group>"; };
+		C8D002261F0E8C4C0051B93F /* MJGifFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MJGifFooter.swift; sourceTree = "<group>"; };
 		C8D8BB9E1EE44C7B007BC167 /* CommentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		C8E1D0A51EFCC08C000AF3FA /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		C8E1D0A61EFCC08C000AF3FA /* SearchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
 		C8E1D0AD1EFCFC1A000AF3FA /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		C8E1D0AE1EFCFC1A000AF3FA /* SearchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		C8E623751F010333004E374D /* JTCoreDataTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTCoreDataTool.swift; sourceTree = "<group>"; };
 		C8F462091EEFD88B00D561B4 /* DownLoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownLoadView.swift; sourceTree = "<group>"; };
 		C8F812471ED55FB60048487F /* BookDetailTopCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailTopCell.swift; sourceTree = "<group>"; };
 		C8F812481ED55FB60048487F /* BookDetailTopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookDetailTopCell.xib; sourceTree = "<group>"; };
@@ -183,6 +260,7 @@
 		C8275DEB1EB82F7700B7D7E1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C8D002231F0E8BDD0051B93F /* MJRefreshDIY */,
 				C8127B1A1EEA8A73008BFA8C /* BaseObject.h */,
 				C8127B1B1EEA8A73008BFA8C /* BaseObject.m */,
 				C8275E011EB87D7900B7D7E1 /* Extension */,
@@ -190,6 +268,7 @@
 				C8275DF01EB86BE400B7D7E1 /* Common.swift */,
 				C856CF3D1EE941490047E96A /* JTDownLoadTool.swift */,
 				C81CA7871EF2CC5400E18847 /* JTDownLoadMode.swift */,
+				C8E623751F010333004E374D /* JTCoreDataTool.swift */,
 				C8127B191EEA8A72008BFA8C /* JTReader-Bridging-Header.h */,
 			);
 			path = Tools;
@@ -210,6 +289,13 @@
 			isa = PBXGroup;
 			children = (
 				C8275E081EB880A400B7D7E1 /* BookShelfVC.swift */,
+				C83E0E7D1F03A01800AC00FF /* BookShelfVC.xib */,
+				C83E0E6F1F034CA200AC00FF /* ShelfReadVC.swift */,
+				C83E0E701F034CA200AC00FF /* ShelfReadVC.xib */,
+				C83C6BAD1F0BDEFD002CD84C /* ShelfReadVCTwo.swift */,
+				C83C6BAE1F0BDEFD002CD84C /* ShelfReadVCTwo.xib */,
+				C83C6BB11F0BE3DB002CD84C /* ReadContentVC.swift */,
+				C83C6BB21F0BE3DB002CD84C /* ReadContentVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -224,6 +310,11 @@
 		C8275DF51EB87D2500B7D7E1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C83E0E761F03868A00AC00FF /* FollowLayout */,
+				C83E0E731F0355C000AC00FF /* BookLayout_OC.h */,
+				C83E0E741F0355C000AC00FF /* BookLayout_OC.m */,
+				C83E0E6B1F0337A300AC00FF /* PageContentCell.swift */,
+				C83E0E6C1F0337A300AC00FF /* PageContentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,11 +342,15 @@
 			children = (
 				C8275E041EB8807700B7D7E1 /* BookStoreVC.swift */,
 				C8275E051EB8807700B7D7E1 /* BookStoreVC.xib */,
+				C81419C41F0CDE6100E631CA /* ActivityVC.swift */,
+				C81419C51F0CDE6100E631CA /* ActivityVC.xib */,
 				C84A5CDB1EBC7DC8009A9EB2 /* BookCatagoryVC.swift */,
 				C85AF7311EC31597002F8CD0 /* CatagorySonVC.swift */,
 				C85AF7321EC31598002F8CD0 /* CatagorySonVC.xib */,
 				C84A5CDF1EBC7E60009A9EB2 /* BookDetailVC.swift */,
 				C84A5CE01EBC7E60009A9EB2 /* BookDetailVC.xib */,
+				C84651521F063D7100DE00F6 /* CommentVC.swift */,
+				C84651531F063D7100DE00F6 /* CommentVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +362,7 @@
 				C84A5CD51EBC5FF5009A9EB2 /* channelModel.swift */,
 				C85AF72F1EC30D75002F8CD0 /* CatagoryModel.swift */,
 				C8D8BB9E1EE44C7B007BC167 /* CommentModel.swift */,
+				C81419C21F0CD8BB00E631CA /* LunboModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +412,10 @@
 		C8275DFD1EB87D2500B7D7E1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C83E0E7F1F03A12A00AC00FF /* UserVC.swift */,
+				C83E0E801F03A12A00AC00FF /* UserVC.xib */,
+				C81419D01F0CE5D500E631CA /* SettingVC.swift */,
+				C81419D11F0CE5D500E631CA /* SettingVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,6 +446,7 @@
 			children = (
 				C84D16AE1EB9BE36004FC8F9 /* UIBarButtonItem+Category.swift */,
 				C84D16B01EB9C03E004FC8F9 /* UIColor+category.swift */,
+				C84651501F06285C00DE00F6 /* CALayer+JTXibBorderColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -355,6 +456,17 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C83E0E761F03868A00AC00FF /* FollowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C83E0E771F03868A00AC00FF /* ProductBookShelfDecorationView.h */,
+				C83E0E781F03868A00AC00FF /* ProductBookShelfDecorationView.m */,
+				C83E0E791F03868A00AC00FF /* ProductBookShelfFlowLayout.h */,
+				C83E0E7A1F03868A00AC00FF /* ProductBookShelfFlowLayout.m */,
+			);
+			path = FollowLayout;
 			sourceTree = "<group>";
 		};
 		C84A5CD81EBC7943009A9EB2 /* Resource */ = {
@@ -389,6 +501,8 @@
 		C8542F4E1EBB23D200A44C70 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C82E3AF31F137E5400D327CC /* CircleModel.swift */,
+				C83BFB331F14C6F200D2ECBF /* ShareDubModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -396,6 +510,14 @@
 		C8542F4F1EBB23D200A44C70 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C83BFB2E1F14C30B00D2ECBF /* CircleTopCell.swift */,
+				C83BFB2F1F14C30B00D2ECBF /* CircleTopCell.xib */,
+				C82E3AE61F13582900D327CC /* CircleTextCell.swift */,
+				C82E3AE71F13582900D327CC /* CircleTextCell.xib */,
+				C82E3AEE1F135CDB00D327CC /* CircleImageCell.swift */,
+				C82E3AEF1F135CDB00D327CC /* CircleImageCell.xib */,
+				C82E3AEA1F13583900D327CC /* CircleObjcCell.swift */,
+				C82E3AEB1F13583900D327CC /* CircleObjcCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -461,6 +583,8 @@
 			children = (
 				C8CEACD01EBEFA620028DCF6 /* BookReadVC.swift */,
 				C8CEACD11EBEFA620028DCF6 /* BookReadVC.xib */,
+				C821DC891F0F2B6C00A47ECC /* DubVC.swift */,
+				C821DC8A1F0F2B6C00A47ECC /* DubVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -486,6 +610,15 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C8D002231F0E8BDD0051B93F /* MJRefreshDIY */ = {
+			isa = PBXGroup;
+			children = (
+				C8D002241F0E8C2F0051B93F /* MJGifHeader.swift */,
+				C8D002261F0E8C4C0051B93F /* MJGifFooter.swift */,
+			);
+			path = MJRefreshDIY;
 			sourceTree = "<group>";
 		};
 		C8E1D0A01EFCB4C3000AF3FA /* Search */ = {
@@ -595,24 +728,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83C6BB41F0BE3DB002CD84C /* ReadContentVC.xib in Resources */,
 				C87B71261EB7819500D5A173 /* LaunchScreen.storyboard in Resources */,
 				C8542F5A1EBB274300A44C70 /* ContentVC.xib in Resources */,
 				C85A0B881ED67FDE00940901 /* CommentHeaderCell.xib in Resources */,
 				C84A5CE21EBC7E60009A9EB2 /* BookDetailVC.xib in Resources */,
+				C81419D31F0CE5D500E631CA /* SettingVC.xib in Resources */,
+				C83E0E721F034CA200AC00FF /* ShelfReadVC.xib in Resources */,
 				C8F812521ED55FF10048487F /* CommentCell.xib in Resources */,
 				C8275E071EB8807700B7D7E1 /* BookStoreVC.xib in Resources */,
 				C87B71231EB7819500D5A173 /* Assets.xcassets in Resources */,
+				C82E3AED1F13583900D327CC /* CircleObjcCell.xib in Resources */,
 				C85AF7341EC31598002F8CD0 /* CatagorySonVC.xib in Resources */,
 				C8E1D0A81EFCC08C000AF3FA /* SearchVC.xib in Resources */,
+				C84651551F063D7100DE00F6 /* CommentVC.xib in Resources */,
+				C83E0E821F03A12A00AC00FF /* UserVC.xib in Resources */,
+				C82E3AE91F13582900D327CC /* CircleTextCell.xib in Resources */,
 				C84A5CD01EBC4F64009A9EB2 /* BookStoreCell.xib in Resources */,
 				C8CEACD31EBEFA620028DCF6 /* BookReadVC.xib in Resources */,
+				C83E0E7E1F03A01800AC00FF /* BookShelfVC.xib in Resources */,
 				C8542F5C1EBB2B4400A44C70 /* CircleVC.xib in Resources */,
+				C83C6BB01F0BDEFD002CD84C /* ShelfReadVCTwo.xib in Resources */,
 				C87B711E1EB7819500D5A173 /* Main.storyboard in Resources */,
 				C84CD8021EFA6D6D00F08543 /* BookStoreLunboCell.xib in Resources */,
 				C809FBC01EC3614B006CE0E7 /* BookCell.xib in Resources */,
 				C8F8124A1ED55FB60048487F /* BookDetailTopCell.xib in Resources */,
+				C82E3AF11F135CDB00D327CC /* CircleImageCell.xib in Resources */,
+				C83E0E6E1F0337A300AC00FF /* PageContentCell.xib in Resources */,
 				C8E1D0B01EFCFC1A000AF3FA /* SearchCell.xib in Resources */,
+				C83BFB311F14C30B00D2ECBF /* CircleTopCell.xib in Resources */,
+				C81419C71F0CDE6100E631CA /* ActivityVC.xib in Resources */,
 				C8CEACCA1EBEE9310028DCF6 /* 默认_banner.jpg in Resources */,
+				C821DC8C1F0F2B6C00A47ECC /* DubVC.xib in Resources */,
 				C84A5CDA1EBC7948009A9EB2 /* default_img.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,44 +820,67 @@
 			buildActionMask = 2147483647;
 			files = (
 				C84A5CD61EBC5FF5009A9EB2 /* channelModel.swift in Sources */,
+				C83E0E6D1F0337A300AC00FF /* PageContentCell.swift in Sources */,
+				C84651511F06285C00DE00F6 /* CALayer+JTXibBorderColor.swift in Sources */,
 				C85AF7331EC31598002F8CD0 /* CatagorySonVC.swift in Sources */,
+				C83C6BB31F0BE3DB002CD84C /* ReadContentVC.swift in Sources */,
+				C81419D21F0CE5D500E631CA /* SettingVC.swift in Sources */,
 				C84A5CDD1EBC7DC8009A9EB2 /* BookCatagoryVC.swift in Sources */,
 				C8CEACC71EBEC0FF0028DCF6 /* JTCarouselView.swift in Sources */,
+				C84651541F063D7100DE00F6 /* CommentVC.swift in Sources */,
 				C84A5CD41EBC5FD9009A9EB2 /* Book.swift in Sources */,
+				C81419C61F0CDE6100E631CA /* ActivityVC.swift in Sources */,
 				C8F812511ED55FF10048487F /* CommentCell.swift in Sources */,
 				C84A5CD21EBC5C94009A9EB2 /* BookStoreViewModel.swift in Sources */,
 				C81CA7881EF2CC5400E18847 /* JTDownLoadMode.swift in Sources */,
+				C8D002271F0E8C4C0051B93F /* MJGifFooter.swift in Sources */,
+				C82E3AF41F137E5400D327CC /* CircleModel.swift in Sources */,
+				C83C6BAF1F0BDEFD002CD84C /* ShelfReadVCTwo.swift in Sources */,
 				C8275E061EB8807700B7D7E1 /* BookStoreVC.swift in Sources */,
 				C84D16B31EB9DD7A004FC8F9 /* MainViewController.swift in Sources */,
 				C8275DED1EB8324F00B7D7E1 /* NetWorkTool.swift in Sources */,
+				C83E0E7B1F03868A00AC00FF /* ProductBookShelfDecorationView.m in Sources */,
+				C81419C31F0CD8BB00E631CA /* LunboModel.swift in Sources */,
 				C8CEACD21EBEFA620028DCF6 /* BookReadVC.swift in Sources */,
 				C8275E0A1EB880A400B7D7E1 /* BookShelfVC.swift in Sources */,
 				C8E1D0AF1EFCFC1A000AF3FA /* SearchCell.swift in Sources */,
+				C8E623761F010333004E374D /* JTCoreDataTool.swift in Sources */,
 				C8F4620A1EEFD88B00D561B4 /* DownLoadView.swift in Sources */,
 				C85A0B871ED67FDE00940901 /* CommentHeaderCell.swift in Sources */,
+				C8D002251F0E8C2F0051B93F /* MJGifHeader.swift in Sources */,
 				C87B711B1EB7819500D5A173 /* ViewController.swift in Sources */,
+				C82E3AEC1F13583900D327CC /* CircleObjcCell.swift in Sources */,
 				C813315F1EF927DD0081BDB4 /* PageContent.swift in Sources */,
 				C87B71191EB7819500D5A173 /* AppDelegate.swift in Sources */,
 				C8127B1C1EEA8A73008BFA8C /* BaseObject.m in Sources */,
+				C83E0E811F03A12A00AC00FF /* UserVC.swift in Sources */,
 				C84D16B11EB9C03E004FC8F9 /* UIColor+category.swift in Sources */,
 				C84CD8011EFA6D6D00F08543 /* BookStoreLunboCell.swift in Sources */,
 				C8CEACD61EBF13B60028DCF6 /* PageContentView.swift in Sources */,
+				C83E0E7C1F03868A00AC00FF /* ProductBookShelfFlowLayout.m in Sources */,
 				C87B71211EB7819500D5A173 /* JTReader.xcdatamodeld in Sources */,
+				C83E0E751F0355C000AC00FF /* BookLayout_OC.m in Sources */,
+				C83BFB301F14C30B00D2ECBF /* CircleTopCell.swift in Sources */,
+				C83E0E711F034CA200AC00FF /* ShelfReadVC.swift in Sources */,
 				C84A5CCF1EBC4F64009A9EB2 /* BookStoreCell.swift in Sources */,
 				C8542F521EBB23FA00A44C70 /* CircleVC.swift in Sources */,
 				C8D8BB9F1EE44C7B007BC167 /* CommentModel.swift in Sources */,
 				C809FBBF1EC3614B006CE0E7 /* BookCell.swift in Sources */,
 				C8F812491ED55FB60048487F /* BookDetailTopCell.swift in Sources */,
 				C8E1D0A71EFCC08C000AF3FA /* SearchVC.swift in Sources */,
+				C82E3AF01F135CDB00D327CC /* CircleImageCell.swift in Sources */,
 				C8542F591EBB274300A44C70 /* ContentVC.swift in Sources */,
 				C8275DF11EB86BE400B7D7E1 /* Common.swift in Sources */,
+				C82E3AE81F13582900D327CC /* CircleTextCell.swift in Sources */,
 				C8CEACD71EBF13B60028DCF6 /* PageTitleView.swift in Sources */,
 				C85AF7301EC30D75002F8CD0 /* CatagoryModel.swift in Sources */,
+				C821DC8B1F0F2B6C00A47ECC /* DubVC.swift in Sources */,
 				C856CF3E1EE941490047E96A /* JTDownLoadTool.swift in Sources */,
 				C84A5CE11EBC7E60009A9EB2 /* BookDetailVC.swift in Sources */,
 				C8275DEF1EB8327900B7D7E1 /* JTBaseViewController.swift in Sources */,
 				C84D16AF1EB9BE36004FC8F9 /* UIBarButtonItem+Category.swift in Sources */,
 				C85AF72E1EC30AE1002F8CD0 /* BookCatagoryVM.swift in Sources */,
+				C83BFB341F14C6F200D2ECBF /* ShareDubModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

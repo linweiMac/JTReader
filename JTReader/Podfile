@@ -17,4 +17,8 @@ pod 'MJRefresh'
 pod 'ZipArchive'
 pod 'TMCache'
 pod 'MBProgressHUD'
+pod 'SAMTextView'
+pod 'MMDrawerController'
+pod 'mp3lame-for-ios'
+pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
 end

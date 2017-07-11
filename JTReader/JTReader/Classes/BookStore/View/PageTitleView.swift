@@ -83,7 +83,15 @@ extension PageTitleView {
     fileprivate func setTitleLables() {
         
         let labelY : CGFloat = 0
-        let labelW : CGFloat = kScreenW / 4
+//        let labelW : CGFloat = kScreenW / 4
+        
+        var labelW : CGFloat
+        if titles.count > 4 {
+            labelW = 80
+        } else {
+            labelW = kScreenW / 4
+        }
+        
         let labelH : CGFloat = kTitleViewH
         
         for (index, title) in titles.enumerated() {
@@ -187,14 +195,23 @@ extension PageTitleView {
         scrollViewLine.frame.origin.x = sourceLabel.frame.origin.x + moveX
         
         //2.1处理scrollView的offset逻辑
-        let count = targetIndex / 4
         if progress == 1 {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.scrollView.contentOffset = CGPoint(x: kScreenW * CGFloat(count), y: 0)
-            }, completion: { (bool) in
-                
-            })
+            print("开始处理offset")
+            let scrollViewW = self.scrollView.frame.width
+            var offsetX:CGFloat = 0
+            
+            if targetLabel.center.x + scrollViewW/2 >= scrollView.contentSize.width {
+                offsetX = scrollView.contentSize.width - scrollViewW
+            }
+            else if (targetLabel.center.x - scrollViewW/2) <= 0 {
+                offsetX = 0
+            }
+            else {
+                offsetX = targetLabel.center.x - scrollViewW/2
+            }
+            scrollView.setContentOffset(CGPoint(x:offsetX,y:0), animated: true)
         }
+        
         
         //3.titleLabel的字体颜色变化
         let colorRang = (r: kSelectColor.0 - kNormalColor.0, g: kSelectColor.1 - kNormalColor.1, b: kSelectColor.2 - kNormalColor.2)

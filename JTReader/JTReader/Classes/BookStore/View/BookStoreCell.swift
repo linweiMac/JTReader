@@ -78,6 +78,11 @@ class BookStoreCell: UITableViewCell {
         print(v?.tag ?? 1)
         
         let book = model?.bookList[(v?.tag)!-1]
+        
+        if book == nil {
+            return
+        }
+        
         self.bookDetailBlock(book!)
     }
     

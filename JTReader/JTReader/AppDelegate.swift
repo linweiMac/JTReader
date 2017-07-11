@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MMDrawerController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-
+//        UIViewController * leftDrawer = [[UIViewController alloc] init];
+//        UIViewController * center = [[UIViewController alloc] init];
+//        UIViewController * rightDrawer = [[UIViewController alloc] init];
+//        
+//        MMDrawerController * drawerController = [[MMDrawerController alloc]
+//        initWithCenterViewController:center
+//        leftDrawerViewController:leftDrawer
+//        rightDrawerViewController:rightDrawer];
+        
+        let leftVC = UserVC()
+        let center = BookShelfVC()
+        let nav1 = UINavigationController.init(rootViewController: center)
+        let nav2 = UINavigationController.init(rootViewController: leftVC)
+        let drawerController = MMDrawerController.init(center: nav1, leftDrawerViewController: nav2)
+//
+        drawerController!.maximumLeftDrawerWidth = 320
+        drawerController!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.all
+        drawerController?.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.all
+        drawerController!.showsShadow = true
+        self.window?.rootViewController = drawerController
         
         return true
     }
@@ -40,9 +60,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return UIInterfaceOrientationMask.landscapeLeft
 //            }
             
-        }else{
+        }else if allowRotation == 0 {
             
             return UIInterfaceOrientationMask.portrait
+        } else {
+            return UIInterfaceOrientationMask.all
         }
         
     }

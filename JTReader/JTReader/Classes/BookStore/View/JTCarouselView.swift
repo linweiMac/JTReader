@@ -10,7 +10,7 @@ import UIKit
 
 protocol JTCarouseViewDelegate : class {
     
-    func carouseView(_ carouseView : JTCarouselView, selectedIndex index : Int)
+    func carouseView(_ carouseView : JTCarouselView, selectedIndex lunboModel : LunboModel)
 }
 
 class JTCarouselView: UIView {
@@ -26,7 +26,7 @@ class JTCarouselView: UIView {
     fileprivate var timer = Timer()
     
     // MARK:-数据源
-    var dataArr : [String]? {
+    var dataArr : [LunboModel]? {
         
         didSet {
             configureImage()
@@ -103,7 +103,7 @@ extension JTCarouselView {
     
     @objc fileprivate func imageTap() {
         print("点击轮播")
-        delegate?.carouseView(self, selectedIndex: self.currentIndex)
+        delegate?.carouseView(self, selectedIndex: self.dataArr![self.currentIndex])
     }
     
     
@@ -111,36 +111,38 @@ extension JTCarouselView {
         
         //当前显示的是第一张图片
         if self.currentIndex == 0 {
-            self.leftImg.kf.setImage(with: URL(string : self.dataArr!.last!))
-            self.midImg.kf.setImage(with: URL(string : self.dataArr!.first!))
+            self.leftImg.kf.setImage(with: URL(string : self.dataArr!.last!.imageUrl))
+            self.midImg.kf.setImage(with: URL(string : self.dataArr!.first!.imageUrl))
             
             let rightIndex = (self.dataArr?.count)!>1 ? 1 : 0 //保护
-            self.rightImg.kf.setImage(with: URL(string : self.dataArr![rightIndex]))
+            self.rightImg.kf.setImage(with: URL(string : self.dataArr![rightIndex].imageUrl))
         }
             //当前显示的是最好一张图片
         else if self.currentIndex == (self.dataArr?.count)! - 1 {
             
-            self.leftImg.kf.setImage(with: URL(string : self.dataArr![self.currentIndex-1]))
-            self.midImg.kf.setImage(with: URL(string : self.dataArr!.last!))
-            self.rightImg.kf.setImage(with: URL(string : self.dataArr!.first!))
+            self.leftImg.kf.setImage(with: URL(string : self.dataArr![self.currentIndex-1].imageUrl))
+            self.midImg.kf.setImage(with: URL(string : self.dataArr!.last!.imageUrl))
+            self.rightImg.kf.setImage(with: URL(string : self.dataArr!.first!.imageUrl))
         }
             //其他情况
         else{
             
-            self.leftImg.kf.setImage(with: URL(string : self.dataArr![self.currentIndex-1]))
-            self.midImg.kf.setImage(with: URL(string : self.dataArr![self.currentIndex]))
-            self.rightImg.kf.setImage(with: URL(string : self.dataArr![self.currentIndex+1]))
+            self.leftImg.kf.setImage(with: URL(string : self.dataArr![self.currentIndex-1].imageUrl))
+            self.midImg.kf.setImage(with: URL(string : self.dataArr![self.currentIndex].imageUrl))
+            self.rightImg.kf.setImage(with: URL(string : self.dataArr![self.currentIndex+1].imageUrl))
         }
     }
     
     fileprivate func configureTimer () {
         
-        timer = Timer.scheduledTimer(timeInterval: 8, target: self, selector: #selector(JTCarouselView.letScroll), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(JTCarouselView.letScroll), userInfo: nil, repeats: true)
     }
     
     func letScroll () {
         let offset = CGPoint(x: 2*kScreenW, y: 0)
         self.scrollView.setContentOffset(offset, animated: true)
+        
+        
     }
     
 }
@@ -198,9 +200,50 @@ extension JTCarouselView : UIScrollViewDelegate {
             //设置页控制器当前页码
             self.pageControl.currentPage = self.currentIndex
         }
-
     }
     
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        
+        if self.dataArr == nil {
+            return
+        }
+        
+        //获取当前偏移量
+        let offset = scrollView.contentOffset.x
+        
+        if(self.dataArr?.count != 0){
+            
+            //如果向左滑动（显示下一张）
+            if(offset >= kScreenW*2){
+                //还原偏移量
+                scrollView.contentOffset = CGPoint(x: kScreenW, y: 0)
+                //视图索引+1
+                self.currentIndex = self.currentIndex + 1
+                
+                if self.currentIndex == self.dataArr?.count {
+                    self.currentIndex = 0
+                }
+            }
+            
+            //如果向右滑动（显示上一张）
+            if(offset <= 0){
+                //还原偏移量
+                scrollView.contentOffset = CGPoint(x: kScreenW, y: 0)
+                //视图索引-1
+                self.currentIndex = self.currentIndex - 1
+                
+                if self.currentIndex == -1 {
+                    self.currentIndex = (self.dataArr?.count)! - 1
+                }
+            }
+            
+            //重新设置各个imageView的图片
+            reloadImage()
+            //设置页控制器当前页码
+            self.pageControl.currentPage = self.currentIndex
+        }
+        
+    }
 }
 
 

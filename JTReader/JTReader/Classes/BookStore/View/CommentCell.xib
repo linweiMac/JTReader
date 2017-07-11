@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -44,14 +45,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pz0-aA-Whb" customClass="EDStarRating">
-                        <rect key="frame" x="66" y="54.5" width="357" height="16"/>
-                        <color key="backgroundColor" red="1" green="0.7796162724971436" blue="0.69050285273068857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="66" y="54.5" width="178.5" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="16" id="hwJ-A8-L7k"/>
+                            <constraint firstAttribute="height" constant="20" id="hwJ-A8-L7k"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是评论内容" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj1-gg-y25">
-                        <rect key="frame" x="66" y="78.5" width="417" height="149"/>
+                        <rect key="frame" x="66" y="82.5" width="417" height="145"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="0.94849636130136983" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -93,10 +94,10 @@
                 <constraints>
                     <constraint firstItem="JaW-BQ-ymD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="20o-re-bdF"/>
                     <constraint firstItem="pz0-aA-Whb" firstAttribute="leading" secondItem="MK7-yx-EDJ" secondAttribute="trailing" constant="8" id="4vB-Fh-j6T"/>
+                    <constraint firstItem="pz0-aA-Whb" firstAttribute="width" secondItem="UKK-vd-GP2" secondAttribute="width" multiplier="0.5" id="EKG-hw-ZTy"/>
                     <constraint firstAttribute="bottom" secondItem="vj1-gg-y25" secondAttribute="bottom" constant="8" id="GXx-Wa-MH6"/>
                     <constraint firstItem="UKK-vd-GP2" firstAttribute="top" secondItem="xfu-er-TvG" secondAttribute="bottom" constant="5" id="Gca-2K-6IM"/>
                     <constraint firstItem="vHI-hS-hmb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="KXO-lJ-hYb"/>
-                    <constraint firstItem="pz0-aA-Whb" firstAttribute="trailing" secondItem="UKK-vd-GP2" secondAttribute="trailing" id="Umy-mn-P1F"/>
                     <constraint firstItem="lFA-TH-ofa" firstAttribute="leading" secondItem="MK7-yx-EDJ" secondAttribute="leading" id="XqG-SC-wKr"/>
                     <constraint firstAttribute="trailing" secondItem="vj1-gg-y25" secondAttribute="trailing" constant="8" id="Y1w-Jm-n6y"/>
                     <constraint firstItem="xfu-er-TvG" firstAttribute="leading" secondItem="MK7-yx-EDJ" secondAttribute="trailing" constant="8" id="Yyd-ce-d84"/>

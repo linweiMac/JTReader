@@ -13,6 +13,10 @@ class CommentHeaderCell: UITableViewHeaderFooterView {
 
     @IBOutlet var starrating: EDStarRating!
     
+    @IBOutlet var commentBtn: UIButton!
+    
+    var beginComment : () -> () = {}
+    
     public var score : CGFloat? {
         
         didSet {
@@ -29,8 +33,6 @@ class CommentHeaderCell: UITableViewHeaderFooterView {
         super.awakeFromNib()
         // Initialization code
         /*
-         
-         
          self.starRating.maxRating = 5.0;
          self.starRating.horizontalMargin = 5;
          self.starRating.editable = NO;
@@ -38,9 +40,13 @@ class CommentHeaderCell: UITableViewHeaderFooterView {
          self.starRating.rating = [_bookContent.score floatValue];
          */
         
+        self.commentBtn.layer.cornerRadius = 14
+        self.commentBtn.layer.borderWidth = 1
+        self.commentBtn.layer.borderColor = UIColor(r: 60, g: 154, b: 252).cgColor
+        
         self.starrating.backgroundColor = UIColor.clear
-        self.starrating.starImage = UIImage.init(named: "starN")
-        self.starrating.starHighlightedImage = UIImage.init(named: "startS")
+        self.starrating.starImage = UIImage.init(named: "comment_star")
+        self.starrating.starHighlightedImage = UIImage.init(named: "comment_starL")
         self.starrating.maxRating = Int(5.0)
         self.starrating.horizontalMargin = 0
         self.starrating.editable = false
@@ -49,5 +55,6 @@ class CommentHeaderCell: UITableViewHeaderFooterView {
     }
     
     @IBAction func commentClick(_ sender: UIButton) {
+        self.beginComment()
     }
 }

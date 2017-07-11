@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="CircleTopCell" customModule="JTReader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bo-yi-tfX">
+                        <rect key="frame" x="0.0" y="5" width="320" height="60"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzy-H6-0bD">
+                                <rect key="frame" x="50" y="5" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.67539333550000002" green="0.90986090900000005" blue="0.87160954359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KzE-Bs-aw1"/>
+                                    <constraint firstAttribute="width" constant="50" id="TKO-B2-oTR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="原创区"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DD-Fj-ccT">
+                                <rect key="frame" x="220" y="5" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.67539333550000002" green="0.90986090900000005" blue="0.87160954359999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OIH-e1-sRu"/>
+                                    <constraint firstAttribute="width" constant="50" id="jGx-3t-NP3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="配音区"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9l-A8-IlQ">
+                                <rect key="frame" x="135" y="5" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.6753933355321694" green="0.90986090898513794" blue="0.87160954363521537" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7hr-LF-YLS"/>
+                                    <constraint firstAttribute="width" constant="50" id="Vc2-1T-Gj5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="爱聊区"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3DD-Fj-ccT" secondAttribute="bottom" constant="5" id="4zQ-u8-gSX"/>
+                            <constraint firstAttribute="bottom" secondItem="Bzy-H6-0bD" secondAttribute="bottom" constant="5" id="7ah-NF-Wlr"/>
+                            <constraint firstItem="3DD-Fj-ccT" firstAttribute="leading" secondItem="h9l-A8-IlQ" secondAttribute="trailing" constant="35" id="DwK-Pz-8l9"/>
+                            <constraint firstItem="h9l-A8-IlQ" firstAttribute="centerY" secondItem="1bo-yi-tfX" secondAttribute="centerY" id="EA6-Rk-JK7"/>
+                            <constraint firstItem="Bzy-H6-0bD" firstAttribute="top" secondItem="1bo-yi-tfX" secondAttribute="top" constant="5" id="SRv-76-KNj"/>
+                            <constraint firstItem="h9l-A8-IlQ" firstAttribute="leading" secondItem="Bzy-H6-0bD" secondAttribute="trailing" constant="35" id="eWH-ge-8GI"/>
+                            <constraint firstItem="3DD-Fj-ccT" firstAttribute="top" secondItem="1bo-yi-tfX" secondAttribute="top" constant="5" id="uWH-h5-Ix2"/>
+                            <constraint firstItem="h9l-A8-IlQ" firstAttribute="centerX" secondItem="1bo-yi-tfX" secondAttribute="centerX" id="zU6-vQ-duq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.90578371286392212" green="0.90593916177749634" blue="0.90577393770217896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="1bo-yi-tfX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OAS-u5-OSy"/>
+                    <constraint firstAttribute="trailing" secondItem="1bo-yi-tfX" secondAttribute="trailing" id="Ocs-Be-VpP"/>
+                    <constraint firstAttribute="bottom" secondItem="1bo-yi-tfX" secondAttribute="bottom" constant="5" id="TeL-yl-vXN"/>
+                    <constraint firstItem="1bo-yi-tfX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="cdO-Zg-CAV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-24" y="48"/>
+        </tableViewCell>
+    </objects>
+</document>
