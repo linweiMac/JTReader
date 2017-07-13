@@ -13,8 +13,6 @@ class JTBaseViewController: UIViewController, AVAudioPlayerDelegate {
 
     public var soundPlayer : AVAudioPlayer?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,8 +24,8 @@ class JTBaseViewController: UIViewController, AVAudioPlayerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    //播放本地音频
     public func playSound(musicPath : String, with delegate : Bool) {
-        
         
         soundPlayer?.stop()
         soundPlayer = nil
@@ -41,6 +39,9 @@ class JTBaseViewController: UIViewController, AVAudioPlayerDelegate {
         }
         soundPlayer?.play()
     }
+    
+    //播放网络音频
+    
     
     //屏幕截图
     public func screenShot() -> (UIImage) {

@@ -19,4 +19,3 @@ let kNavGationH : CGFloat = 44
 
 let kAPIBaseURLString : NSString = "https://m.xueduoduo.com/huiyuedu2/"
 
-

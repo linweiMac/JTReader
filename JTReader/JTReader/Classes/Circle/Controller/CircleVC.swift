@@ -36,9 +36,7 @@ class CircleVC: JTBaseViewController {
         tableView.register(UINib.init(nibName: "CircleImageCell", bundle: nil), forCellReuseIdentifier: "CircleImageCell")
         tableView.register(UINib.init(nibName: "CircleObjcCell", bundle: nil), forCellReuseIdentifier: "CircleObjcCell")
         tableView.separatorStyle = .none
-        
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -79,8 +77,6 @@ extension CircleVC {
             //4.刷新界面
             self.tableView.reloadData()
         }
-        
-        
     }
 }
 
@@ -93,10 +89,16 @@ extension CircleVC : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if self.listArr.count == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CircleTextCell", for: indexPath)
+            
+            return cell
+        }
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CircleTopCell", for: indexPath)
@@ -104,9 +106,26 @@ extension CircleVC : UITableViewDelegate, UITableViewDataSource {
         }
         else
         {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CircleTextCell", for: indexPath)
+            let model = self.listArr[indexPath.row-1] as CircleModel
             
-            return cell
+            if model.type == 1 //纯文字
+            {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CircleTextCell", for: indexPath)
+                
+                return cell
+            }
+            else if model.type == 2 //图片
+            {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CircleImageCell", for: indexPath)
+                
+                return cell
+            }
+            else // 绘本和配音
+            {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "CircleObjcCell", for: indexPath)
+                
+                return cell
+            }
         }
     }
     
@@ -118,7 +137,7 @@ extension CircleVC : UITableViewDelegate, UITableViewDataSource {
         }
         else
         {
-            return 150
+            return 340
         }
     }
 }

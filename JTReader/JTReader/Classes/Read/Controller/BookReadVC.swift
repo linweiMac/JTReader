@@ -21,7 +21,7 @@ class BookReadVC: JTBaseViewController, JTDownLoadToolDelegate {
     var pageNum = 1
     var pathAll = ""
     
-    var  bookPath : NSString?
+    var bookPath : NSString?
     
     var downLoadTool = JTDownLoadTool()
     
@@ -94,9 +94,6 @@ class BookReadVC: JTBaseViewController, JTDownLoadToolDelegate {
         if cacheBook != nil { //下载完成了  开始看书
             print("下载完成")
             //书本保存的路径
-//            let documentURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-//            let filePath = documentURL.appendingPathComponent("zip/" + showBook.id.stringValue + ".zip")
-            
             let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true)
             let documentPath = paths[0]
             
@@ -107,7 +104,7 @@ class BookReadVC: JTBaseViewController, JTDownLoadToolDelegate {
         } else {//未下载完成
             
             //下载动画初始化
-            loadingView = DownLoadView.init(frame: CGRect(x: 0, y: 0, width: 248, height: 35))
+            loadingView = DownLoadView.init(frame: self.view.bounds)
             loadingView!.center = self.view.center
             self.view.addSubview(loadingView!)
             

@@ -50,6 +50,9 @@
 		C83E0E7E1F03A01800AC00FF /* BookShelfVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83E0E7D1F03A01800AC00FF /* BookShelfVC.xib */; };
 		C83E0E811F03A12A00AC00FF /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E0E7F1F03A12A00AC00FF /* UserVC.swift */; };
 		C83E0E821F03A12A00AC00FF /* UserVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83E0E801F03A12A00AC00FF /* UserVC.xib */; };
+		C83F218D1F17059100DB1DE5 /* 开始你的表演.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C83F218C1F17059100DB1DE5 /* 开始你的表演.jpg */; };
+		C83F21931F17653000DB1DE5 /* FindBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83F21911F17653000DB1DE5 /* FindBookVC.swift */; };
+		C83F21941F17653000DB1DE5 /* FindBookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C83F21921F17653000DB1DE5 /* FindBookVC.xib */; };
 		C84651511F06285C00DE00F6 /* CALayer+JTXibBorderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84651501F06285C00DE00F6 /* CALayer+JTXibBorderColor.swift */; };
 		C84651541F063D7100DE00F6 /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84651521F063D7100DE00F6 /* CommentVC.swift */; };
 		C84651551F063D7100DE00F6 /* CommentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C84651531F063D7100DE00F6 /* CommentVC.xib */; };
@@ -67,6 +70,10 @@
 		C84D16AF1EB9BE36004FC8F9 /* UIBarButtonItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D16AE1EB9BE36004FC8F9 /* UIBarButtonItem+Category.swift */; };
 		C84D16B11EB9C03E004FC8F9 /* UIColor+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D16B01EB9C03E004FC8F9 /* UIColor+category.swift */; };
 		C84D16B31EB9DD7A004FC8F9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84D16B21EB9DD7A004FC8F9 /* MainViewController.swift */; };
+		C84EBECC1F15EF9D00489760 /* FilePathHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C84EBEC91F15EF9D00489760 /* FilePathHelper.m */; };
+		C84EBECD1F15EF9D00489760 /* JsonHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C84EBECB1F15EF9D00489760 /* JsonHelper.m */; };
+		C84EBECF1F15F32C00489760 /* RecordHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84EBECE1F15F32B00489760 /* RecordHelper.swift */; };
+		C84EBED21F1618C100489760 /* DubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84EBED11F1618C100489760 /* DubModel.swift */; };
 		C8542F521EBB23FA00A44C70 /* CircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8542F511EBB23FA00A44C70 /* CircleVC.swift */; };
 		C8542F591EBB274300A44C70 /* ContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8542F571EBB274300A44C70 /* ContentVC.swift */; };
 		C8542F5A1EBB274300A44C70 /* ContentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8542F581EBB274300A44C70 /* ContentVC.xib */; };
@@ -156,6 +163,9 @@
 		C83E0E7D1F03A01800AC00FF /* BookShelfVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookShelfVC.xib; sourceTree = "<group>"; };
 		C83E0E7F1F03A12A00AC00FF /* UserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		C83E0E801F03A12A00AC00FF /* UserVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserVC.xib; sourceTree = "<group>"; };
+		C83F218C1F17059100DB1DE5 /* 开始你的表演.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "开始你的表演.jpg"; sourceTree = "<group>"; };
+		C83F21911F17653000DB1DE5 /* FindBookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindBookVC.swift; sourceTree = "<group>"; };
+		C83F21921F17653000DB1DE5 /* FindBookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FindBookVC.xib; sourceTree = "<group>"; };
 		C84651501F06285C00DE00F6 /* CALayer+JTXibBorderColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+JTXibBorderColor.swift"; sourceTree = "<group>"; };
 		C84651521F063D7100DE00F6 /* CommentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
 		C84651531F063D7100DE00F6 /* CommentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentVC.xib; sourceTree = "<group>"; };
@@ -173,6 +183,12 @@
 		C84D16AE1EB9BE36004FC8F9 /* UIBarButtonItem+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Category.swift"; sourceTree = "<group>"; };
 		C84D16B01EB9C03E004FC8F9 /* UIColor+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+category.swift"; sourceTree = "<group>"; };
 		C84D16B21EB9DD7A004FC8F9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C84EBEC81F15EF9D00489760 /* FilePathHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilePathHelper.h; sourceTree = "<group>"; };
+		C84EBEC91F15EF9D00489760 /* FilePathHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilePathHelper.m; sourceTree = "<group>"; };
+		C84EBECA1F15EF9D00489760 /* JsonHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonHelper.h; sourceTree = "<group>"; };
+		C84EBECB1F15EF9D00489760 /* JsonHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonHelper.m; sourceTree = "<group>"; };
+		C84EBECE1F15F32B00489760 /* RecordHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordHelper.swift; sourceTree = "<group>"; };
+		C84EBED11F1618C100489760 /* DubModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DubModel.swift; sourceTree = "<group>"; };
 		C8542F511EBB23FA00A44C70 /* CircleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleVC.swift; sourceTree = "<group>"; };
 		C8542F571EBB274300A44C70 /* ContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentVC.swift; sourceTree = "<group>"; };
 		C8542F581EBB274300A44C70 /* ContentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentVC.xib; sourceTree = "<group>"; };
@@ -260,6 +276,7 @@
 		C8275DEB1EB82F7700B7D7E1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C84EBEC71F15EF9500489760 /* Helpers */,
 				C8D002231F0E8BDD0051B93F /* MJRefreshDIY */,
 				C8127B1A1EEA8A73008BFA8C /* BaseObject.h */,
 				C8127B1B1EEA8A73008BFA8C /* BaseObject.m */,
@@ -296,6 +313,8 @@
 				C83C6BAE1F0BDEFD002CD84C /* ShelfReadVCTwo.xib */,
 				C83C6BB11F0BE3DB002CD84C /* ReadContentVC.swift */,
 				C83C6BB21F0BE3DB002CD84C /* ReadContentVC.xib */,
+				C83F21911F17653000DB1DE5 /* FindBookVC.swift */,
+				C83F21921F17653000DB1DE5 /* FindBookVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -472,10 +491,23 @@
 		C84A5CD81EBC7943009A9EB2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C83F218C1F17059100DB1DE5 /* 开始你的表演.jpg */,
 				C8CEACC91EBEE9310028DCF6 /* 默认_banner.jpg */,
 				C84A5CD91EBC7948009A9EB2 /* default_img.jpg */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		C84EBEC71F15EF9500489760 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C84EBEC81F15EF9D00489760 /* FilePathHelper.h */,
+				C84EBEC91F15EF9D00489760 /* FilePathHelper.m */,
+				C84EBECA1F15EF9D00489760 /* JsonHelper.h */,
+				C84EBECB1F15EF9D00489760 /* JsonHelper.m */,
+				C84EBECE1F15F32B00489760 /* RecordHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C8542F4C1EBB23D200A44C70 /* Circle */ = {
@@ -593,6 +625,7 @@
 			isa = PBXGroup;
 			children = (
 				C813315E1EF927DD0081BDB4 /* PageContent.swift */,
+				C84EBED11F1618C100489760 /* DubModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -738,6 +771,7 @@
 				C8F812521ED55FF10048487F /* CommentCell.xib in Resources */,
 				C8275E071EB8807700B7D7E1 /* BookStoreVC.xib in Resources */,
 				C87B71231EB7819500D5A173 /* Assets.xcassets in Resources */,
+				C83F21941F17653000DB1DE5 /* FindBookVC.xib in Resources */,
 				C82E3AED1F13583900D327CC /* CircleObjcCell.xib in Resources */,
 				C85AF7341EC31598002F8CD0 /* CatagorySonVC.xib in Resources */,
 				C8E1D0A81EFCC08C000AF3FA /* SearchVC.xib in Resources */,
@@ -758,6 +792,7 @@
 				C8E1D0B01EFCFC1A000AF3FA /* SearchCell.xib in Resources */,
 				C83BFB311F14C30B00D2ECBF /* CircleTopCell.xib in Resources */,
 				C81419C71F0CDE6100E631CA /* ActivityVC.xib in Resources */,
+				C83F218D1F17059100DB1DE5 /* 开始你的表演.jpg in Resources */,
 				C8CEACCA1EBEE9310028DCF6 /* 默认_banner.jpg in Resources */,
 				C821DC8C1F0F2B6C00A47ECC /* DubVC.xib in Resources */,
 				C84A5CDA1EBC7948009A9EB2 /* default_img.jpg in Resources */,
@@ -834,6 +869,7 @@
 				C84A5CD21EBC5C94009A9EB2 /* BookStoreViewModel.swift in Sources */,
 				C81CA7881EF2CC5400E18847 /* JTDownLoadMode.swift in Sources */,
 				C8D002271F0E8C4C0051B93F /* MJGifFooter.swift in Sources */,
+				C84EBECC1F15EF9D00489760 /* FilePathHelper.m in Sources */,
 				C82E3AF41F137E5400D327CC /* CircleModel.swift in Sources */,
 				C83C6BAF1F0BDEFD002CD84C /* ShelfReadVCTwo.swift in Sources */,
 				C8275E061EB8807700B7D7E1 /* BookStoreVC.swift in Sources */,
@@ -851,11 +887,14 @@
 				C87B711B1EB7819500D5A173 /* ViewController.swift in Sources */,
 				C82E3AEC1F13583900D327CC /* CircleObjcCell.swift in Sources */,
 				C813315F1EF927DD0081BDB4 /* PageContent.swift in Sources */,
+				C84EBECD1F15EF9D00489760 /* JsonHelper.m in Sources */,
 				C87B71191EB7819500D5A173 /* AppDelegate.swift in Sources */,
 				C8127B1C1EEA8A73008BFA8C /* BaseObject.m in Sources */,
 				C83E0E811F03A12A00AC00FF /* UserVC.swift in Sources */,
 				C84D16B11EB9C03E004FC8F9 /* UIColor+category.swift in Sources */,
 				C84CD8011EFA6D6D00F08543 /* BookStoreLunboCell.swift in Sources */,
+				C84EBECF1F15F32C00489760 /* RecordHelper.swift in Sources */,
+				C83F21931F17653000DB1DE5 /* FindBookVC.swift in Sources */,
 				C8CEACD61EBF13B60028DCF6 /* PageContentView.swift in Sources */,
 				C83E0E7C1F03868A00AC00FF /* ProductBookShelfFlowLayout.m in Sources */,
 				C87B71211EB7819500D5A173 /* JTReader.xcdatamodeld in Sources */,
@@ -869,6 +908,7 @@
 				C8F812491ED55FB60048487F /* BookDetailTopCell.swift in Sources */,
 				C8E1D0A71EFCC08C000AF3FA /* SearchVC.swift in Sources */,
 				C82E3AF01F135CDB00D327CC /* CircleImageCell.swift in Sources */,
+				C84EBED21F1618C100489760 /* DubModel.swift in Sources */,
 				C8542F591EBB274300A44C70 /* ContentVC.swift in Sources */,
 				C8275DF11EB86BE400B7D7E1 /* Common.swift in Sources */,
 				C82E3AE81F13582900D327CC /* CircleTextCell.swift in Sources */,
@@ -1006,7 +1046,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 54598H6C5X;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JTReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xueduoduo.JTReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1023,7 +1065,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 54598H6C5X;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = JTReader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xueduoduo.JTReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";

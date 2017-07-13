@@ -34,7 +34,6 @@ class CircleObjcCell: UITableViewCell {
     
     @IBOutlet var bookContentType: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -45,8 +44,6 @@ class CircleObjcCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    
     
     @IBAction func deletClick(_ sender: UIButton) {
     }

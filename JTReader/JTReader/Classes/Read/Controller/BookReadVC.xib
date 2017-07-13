@@ -34,12 +34,11 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpF-Pc-Z0a">
                     <rect key="frame" x="8" y="8" width="44" height="44"/>
-                    <color key="backgroundColor" red="0.080722046300141306" green="0.12073683375634514" blue="0.092599794137748076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="rvT-UI-1mt"/>
                         <constraint firstAttribute="width" constant="44" id="wFe-rB-Hgv"/>
                     </constraints>
-                    <state key="normal" title="返回"/>
+                    <state key="normal" image="返回2"/>
                     <connections>
                         <action selector="backClick:" destination="-1" eventType="touchUpInside" id="e1P-4K-7vG"/>
                     </connections>
@@ -53,4 +52,7 @@
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="返回2" width="64" height="64"/>
+    </resources>
 </document>

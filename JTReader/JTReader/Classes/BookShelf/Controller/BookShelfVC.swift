@@ -82,7 +82,7 @@ extension BookShelfVC {
         self.automaticallyAdjustsScrollViewInsets = false
         
         //设置导航栏
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(r: 46, g: 46, b: 46)
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(r: 18, g: 123, b: 198)
         
         //设置导航栏
         setBarButtonItem()

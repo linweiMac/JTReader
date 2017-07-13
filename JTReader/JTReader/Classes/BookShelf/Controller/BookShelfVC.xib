@@ -24,7 +24,7 @@
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="GOI-re-Lso">
                     <rect key="frame" x="8" y="72" width="359" height="587"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.90578371286392212" green="0.90593916177749634" blue="0.90577393770217896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oOC-eX-qhK">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -49,7 +49,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.90578371286392212" green="0.90593916177749634" blue="0.90577393770217896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="GOI-re-Lso" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="72" id="71m-Dj-kqC"/>
                 <constraint firstAttribute="trailing" secondItem="GOI-re-Lso" secondAttribute="trailing" constant="8" id="IR2-oM-iTu"/>
@@ -62,6 +62,6 @@
         </view>
     </objects>
     <resources>
-        <image name="书城标签" width="25" height="40"/>
+        <image name="书城标签" width="28" height="40"/>
     </resources>
 </document>

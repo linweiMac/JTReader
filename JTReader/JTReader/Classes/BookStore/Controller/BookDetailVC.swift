@@ -49,8 +49,8 @@ class BookDetailVC: JTBaseViewController {
     @IBAction func dubBtnClick(_ sender: UIButton) {
         
         let vc = DubVC()
-        
-        self.navigationController?.pushViewController(vc, animated: true)
+        vc.showBook = self.showBook
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     // MARK:-下载/阅读点击
