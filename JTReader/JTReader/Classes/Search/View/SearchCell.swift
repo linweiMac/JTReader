@@ -88,7 +88,6 @@ class SearchCell: UITableViewCell {
         else {
             cellHeight = 0
         }
-        
     }
     
     @objc func btnClick(sender : UIButton) {

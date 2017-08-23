@@ -13,11 +13,21 @@ class ReadContentVC: JTBaseViewController {
     @IBOutlet var showImg: UIImageView!
     
     
+    @IBOutlet var bgImg: UIImageView!
+    
+    public var isLeft : Bool?
+    
     public var pageContent : PageContent?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if isLeft! {
+            bgImg.image = UIImage(named: "left")
+        } else {
+            bgImg.image = UIImage(named: "right")
+        }
+        
         showImg.image = UIImage.init(named: "default_img.jpg")
         
         showImg.kf.setImage(with: URL(string: (pageContent?.imageUrl)! as String), placeholder: UIImage.init(named: "default_img.jpg"))

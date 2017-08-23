@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReadContentVC" customModule="JTReader" customModuleProvider="target">
             <connections>
+                <outlet property="bgImg" destination="Zxd-MT-U12" id="0w6-dX-puJ"/>
                 <outlet property="showImg" destination="BmA-eE-4ua" id="4FA-cF-eDC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,7 +21,11 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BmA-eE-4ua">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="left" translatesAutoresizingMaskIntoConstraints="NO" id="Zxd-MT-U12">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BmA-eE-4ua">
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                 </imageView>
             </subviews>
@@ -31,7 +36,10 @@
                 <constraint firstAttribute="bottom" secondItem="BmA-eE-4ua" secondAttribute="bottom" id="hDJ-1i-bav"/>
                 <constraint firstAttribute="trailing" secondItem="BmA-eE-4ua" secondAttribute="trailing" id="kF7-oc-CPq"/>
             </constraints>
-            <point key="canvasLocation" x="68" y="56"/>
+            <point key="canvasLocation" x="67.5" y="55.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="left" width="560" height="652"/>
+    </resources>
 </document>

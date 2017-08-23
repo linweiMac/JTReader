@@ -124,6 +124,14 @@ class ShelfReadVCTwo: JTBaseViewController {
         //创建一个VC
         let vc = ReadContentVC()
         vc.pageContent = pageContentArr[index]
+        
+        let k = index%2
+        if k == 0 {
+            vc.isLeft = true
+        } else {
+            vc.isLeft = false
+        }
+        
         return vc
     }
     
@@ -154,7 +162,7 @@ extension ShelfReadVCTwo : UIPageViewControllerDelegate, UIPageViewControllerDat
         }
         
         index -= 1
-        
+
         return self.viewControllerAtIndex(index: index)
     }
     
